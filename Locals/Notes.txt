@@ -1,0 +1,44 @@
+React Js 
+
+
+How Website Evolved
+           1. More interactivity
+		   2. fully fledged web Application.
+		   3. Modern Applications on browser run like native apps.
+           4. More interactivity -> More JS.
+           5. increased Complexity -> More bugs.
+           6. Manual updation of DOM.
+		   
+Sever Side Rendering (SSR):- 
+      Server-side rendering (SSR) is a technique used in web development
+	  to render web pages on the server before sending them to the client's web browser. 
+	  
+	   How SSR typically works:
+            1. Client Request:
+			          The browser sends a request to the server for a web page.
+            2. Server Processing:
+			          The server receives the request and executes any necessary logic, such as fetching data from a database
+					  or performing computations.
+            3. HTML Generation:
+			          The server generates the complete HTML for the requested page, including the initial content and any
+					  dynamic data.
+            4. HTML Response:
+			          The server sends the fully rendered HTML back to the client's browser.
+
+            5. Client Rendering:
+        			  The browser receives the HTML and displays it to the user. Any subsequent interactivity or updates can
+					  still be handled using client-side JavaScript.
+					  
+
+
+
+Client side Rendering (CSR):- 
+               Client-side rendering (CSR) is a technique in web development where web pages are 
+               generated dynamically within the user's web browser using JavaScript. In CSR, the initial HTML content sent
+			   by the server is minimal, typically containing just the basic structure of the web page, and the rest of
+			   the content is fetched and rendered dynamically by JavaScript.
+
+
+
+React is based on Client side Rendering (CSR)			   
+How client-side rendering typically works:

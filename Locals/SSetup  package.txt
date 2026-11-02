@@ -1,0 +1,69 @@
+  Step 
+  
+  Creating folder 
+      1. inside create npm init -y
+	      changes some in packgae.json file 
+	  2. install typescript  npm i typescript
+	       npx tsc --init 
+	    
+		
+		
+
+
+pakage.json 
+
+ "publishConfig": {
+    "registry": "https://npm.pkg.github.com/rahulphatangare01"
+  },
+  
+  
+  
+  command for run package 
+       npm run dev
+	   npm link   when want to check in locally 
+	   npm publish    publish the package
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   Fluent button 
+	   (alias) const MyButton: (props: ButtonProps) => JSX.Element import MyButton
+	   
+	   ZTButton using fluent UI
+	   (alias) const ZTButton: (props: ButtonProps$1) => react_jsx_runtime.JSX.Element import ZTButton
+	   
+	   
+	   
+	   
+	   
+	   
+	    "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "@babel/preset-react": "^7.23.3",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@types/react": "^18.2.64",
+    "@types/react-dom": "^18.2.21",
+    "jsx-runtime": "^1.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^4.12.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "@fluentui/react-components": "^9.46.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+  
+  
+  
+  
+  
+  https://www.youtube.com/watch?v=XEOJj5mc6ko&list=RDOp4EMZXWjyE&index=13

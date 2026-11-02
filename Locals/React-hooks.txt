@@ -1,0 +1,106 @@
+React hooks 
+     in class base component using state for component 
+	 in function base component we are using hooks  for manage sateful logic and side and side effects in functional component
+	 
+	 
+	 why hooks?
+	   1. There is no particular way to reuse stateful component logic.
+	      HOc and render props patterns do address this problem
+		  makes the code harder to follow
+		  There is need a to share stateful logic in a better way
+		  
+	   2. Create components for complex scenarios such as data fetching and subscribing to events
+	      Related code is not organized in one place
+		  Ex:- Data fetching - In componentDidMount and componentDid Update
+		  Ex:- Event listenrs - In ComponentDid mount and componentWillUnmount
+		  because of stateful logic:- Cannot break components into smaller once.
+		  
+		  
+		  
+		  
+Hooks 
+
+1. useState - 
+              useState is a React hook that allows functional components to manage state.
+			  It provides a way to add stateful logic to functional components.
+			  
+			  Syntax:-
+			         const [ count, setCount] = useState(0)
+					        this is called as array distruturing
+			  Rule of hooks:- 
+                             only call Hooks at the top level
+							 only call Hooks from react functions
+							 
+		      use state with object 
+			     
+				 
+			
+			useState hook return an array with 2 elements.
+			the first element is the current value of state, and second element is state setter function
+			when dealing with object and arrays, always make sure to spread your state varible and then call the setter function.
+			
+			
+			
+		
+		
+		useEffect:- 
+                   1. The useEffect hook lets you perform side effects in functional component.
+                   2. It is a close replacement for componentDidMount, componentDidYpdate, componentWillUnmount	
+
+
+
+
+        useContext:- 
+		             Context provides a way to pass throught the component tress without having to
+					 pass props down manually at every level.
+					 
+					 
+					 code :
+					  App.jsx : 
+					  export const UserContext = React.createContext();
+                      export const ChannelContext = React.createContext();
+					  
+					  <UserContext.Provider value={"Rahul"}>
+						<ChannelContext.Provider value={"Phatangare"}>
+						  <UseContexts />
+						  <Use1Context />
+						</ChannelContext.Provider>
+					  </UserContext.Provider>
+					 
+		             
+					 Another component  UserContenxt.jsx
+					  
+					  import { UserContext, ChannelContext } from "../../../App";
+					  const user = useContext(UserContext);
+                      const channel = useContext(ChannelContext);
+
+		
+		useReducer:- 
+		            1. useReducer is a hook that is used for state management
+                    2. It is an alternative to useState
+                    3. useState is built using useReducer
+					
+		               use reducer s ouse reducer is more primitive hook compared to you state 
+					   
+					    1. useState - state
+						2. useEffect - side Effect
+						3. useContext - context Api
+						4. useReducer - reducer
+						
+						
+					 
+        useCallback hook:- 
+		                  useCallback is a hook that will return a memoized version of callback function that only changes if one of the
+						  changes if one of the dependencies has changed.
+						  
+						  Why?
+						  It is useful passing callbacks to optimized child components that rely on referance equality to prevent unnecessary renders.
+						  
+						  
+		useNavigate hook :-
+		                   
+                          
+		         
+			
+                             							 
+                           			  

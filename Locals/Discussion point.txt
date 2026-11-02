@@ -1,0 +1,541 @@
+feature/PAPS-1391-present-proposal-updated-desig
+
+Finanicial 
+
+Main Branch ----> PAPS-1641-financial-details-section
+
+Analysis 
+
+1. Key-finanical-inidcator --    feature/PAPS-1645-key-financial-indicators-api-i
+2. Ratios                  --    feature/PAPS-1646-ratios-api-intigration
+3. Cash-Flow               --     feature/PAPS-1647-cash-flow-api-integration
+4. Fund-flow               --     feature/PAPS-1648-fund-flow-api-integration
+
+5. Download Excel File    ---   feature/PAPS-1649-download-excel-file-api-integr
+
+---------------------------------------------------------------------------------
+
+exposure 
+
+
+main branch ----->       PAPS-1421-exposure-details-table
+
+1. consortium-details-table       -----> feature/PAPS-1422-consortium-details-table
+
+
+----------------------------------------------------------------
+Download Excel
+mutation($input: GenerateExcelInput!){
+  generateExcel(input: $input){
+   data 
+  }
+}
+
+{
+  "input": {
+    "auditedYears": "2",
+    "projectedYears": "8",
+    "fixedAssetType": "gross",
+    "type": "opc"
+  }
+ 
+ 
+ 
+ 
+ Chetan User 
+ 
+ 
+ User Details Add in localstorage 
+ 
+ okta-id   -- 00ujstx0ixq5o9KsP5d7
+ user-id   -- 5c0373a4-f1f8-43e5-8aec-e95102aa7264
+ 
+ In Browser 
+ 
+ Path -- 
+ http://localhost:3000/paps/organizations/
+ ----------------------------------------------------------------------------------------------
+ 
+  "type": "module",
+  // @ts-ignore	
+  
+  
+ All Documents remove code in title section 
+ 
+  
+   {
+              "key": "adddocument",
+              "Component": "ZButton",
+              "position": 5,
+              "props": {
+                "variant": "secondary",
+                "children": "Add Document"
+              }
+            },
+            {
+              "key": "searchInput",
+              "Component": "ZValidInput",
+              "position": 6,
+              "dataField": true,
+              "props": {
+                "id": "searchInput",
+                "type": "text",
+                "placeholder": "Search",
+                "removeErrorMessage": true
+              }
+            }
+			
+------ after divider 
+ {
+          "zNoColumns": 3,
+          "fields": [
+            {
+              "key": "section",
+              "Component": "ZDropdown",
+              "position": 1,
+              "dataField": true,
+              "props": {
+                "label": "Select section",
+                "verify": "default",
+                "hideValidationIcon": true,
+                "placeholder": "Select section"
+              }
+            }
+          ]
+        },
+		
+-----------------------------------------
+
+1 profile section 
+ 
+	    signzy API get  Data for basic details 
+		signzy API get  data for grop information 
+		signzy API get  data for management 
+		singzy API get  data for shareholding 
+		signzy API get  data for business profile external rating 
+------------------------------------------------
+
+
+
+Jan 2025 
+
+global feature discussion point 
+
+
+
+Search Feature 
+ 1. Global search 
+        Accross Application and navigation 
+	       Text 
+		   table 
+		   Documentation 
+		   
+ 2. context search 
+        only for inside Proposal data search 
+        context data search like present proposal Data search 	   
+
+ 3. local search   
+	    respective data section search 
+
+---------------------
+GQL play-ground
+
+https://dev-caps.zitics.com/graphql
+https://dev-graphql.zitics.com/graphql
+https://www.notion.so/Discussion-170eab02bf1e80b1a30ec3fa3f4b2ebc
+	 
+
+aws codeartifact get-authorization-token --domain crypto --domain-owner 548213222010 --region ap-south-1 --query authorizationToken --output text
+
+
+
+its duplicate of task @Nikhil Kulkarni  If you tested financial then ignore this 
+
+Jira clean up 
+
+1. API integration for Expense  https://zitics.atlassian.net/browse/PAPS-1965
+2. Financial Details Section    https://zitics.atlassian.net/browse/PAPS-1641  1h
+3.  Financials model Frontend.  https://zitics.atlassian.net/browse/PAPS-1601
+4. Create cells and row as per modal Setting for Liability  https://zitics.atlassian.net/browse/PAPS-1871
+
+
+
+
+------------------
+27/1/2025
+
+2160 -row-layout 
+2162 - comments core component 
+2166 - build 
+
+today 
+2177 - userId Auth 
+2176- PAPS user id 
+
+-------------
+28/1/2025
+2177
+2176
+2184
+2185
+
+today 
+2176
+------------
+
+[
+ {id: "", orgId:""}
+]
+
+{
+    "RemoveUserFromOrganization": "Associations removed successfully."
+}
+
+-------------------------
+Progess bar changes 
+1. Exposure 
+    1.1 - Present_Proposal-Facility
+	1.2 - Exposure
+	1.2.1  - Exposure_FinancialInstitution
+	1.2.2  - Exposure_exposure-details
+	
+2. Profile
+   2.1 - Profile-Basic_Details
+   2.2 - Profile-Business_Profile1
+   2.3 - Profile-Shareholding
+   2.4 - Profile-Management
+   2.5 - Profile-Group_Information
+   2.6 - Profile-Subsidy
+
+3. Financials
+   3.1 Financial-Model-Setting
+   3.2 Financial-Model
+   3.2.1 Financial-Model-Liability
+   3.2.2 Financial-Model-Assets
+   3.2.3 Financial-Model-Income
+   3.2.4 Financial-Model-Expense
+   3.2.5 Financial-Model-Profitability   
+   3.3 Financial-Analysis
+   3.3.1 Financial-Analysis-Key_Indicators
+   3.3.2 Financial-Analysis-Ratios
+   3.3.3 Financial-Analysis-Cash_Flow
+   3.3.4 Financial-Analysis-Fund_Flow
+   3.4 Financial-Comments-Section
+   3.4.1 Financial-Comments-Net_sales-and-Sales_variation
+   3.4.2 Financial-Comments-EBITDA
+   3.4.3 Financial-Comments-Profit_after_tax
+   3.4.4 Financial-Comments-Cash_accruals
+   3.4.5 Financial-Comments-Tangible_net_worth
+   3.4.6 Financial-Comments-TOL/TNW_and_TOL/ATNW
+   3.4.7 Financial-Comments-Debt_equity_ratio
+   3.4.8 Financial-Comments-Net working capital & current ratio
+   3.4.9 Financial-Comments-DSCR
+   3.4.10 Financial-Comments-Interest_coverage_ratio
+   3.4.11 Financial-Comments-Cash_flow_analysis
+   3.4.12 Financial-Comments-Fund_flow_analysis
+   
+4 Security
+  4.1 Present_Proposal-Gurantor
+  4.2 Present_Proposal-Security
+  
+5. Annexures
+6. Documentation
+7. Submission
+   
+---- March 2025 plan ------
+
+multiple things
+
+
+target is not start something 
+target is end something
+ 
+tabnine AI 
+
+-----------------------
+Devops  Concept understanding 
+
+1. jenkins 
+
+changes in path in script 
+only change in s3Bucket
+
+
+
+AWS
+cloudfront (Domain apply)
+cloud distrubuition Id change in script 
+
+
+
+flow 
+
+bitbucket 
+
+
+jenkins configration for Autmatic tirgger build 
+select this option - Build when changes in pushed to bitbucket
+
+
+1. concept create 
+  1. create pipeline 
+  2. CI/CD for application pipe line 
+  3. 
+  
+----------
+AWS 
+
+
+
+Media platform  -- Done 
+CodeArtifact -- 
+
+
+---
+Elsatic container registery (Backend)
+
+
+create sub domain  
+Route 53 
+
+
+-- Create Sub domain process ---
+1. Create route on route 53 
+2. create distribution on clodfront 
+3. create sub domain on route 53
+
+
+
+
+
+------------------------------
+3/5/2025  Retrospective 
+
+OTP Process flow 
+
+1. send otp
+2. re-send otp 
+3. otp expiry 
+4. 
+
+
+source stystem otp (aadhar)
+zitics system otp 
+
+---
+ 
+propsal team & Access Control 
+owner --> ownership can be tranfer to some one else
+viewer 
+editor
+
+
+----------------------------------
+Leads Meeting - 22/7/2025
+- Discussion Point
+   1. Secreat key manager 
+   2. Local Storage Data Encryption secrete key or salt genration for particular session.
+   3. file manager for single file upload or mutli-file upload using sync-fusion component.
+   4. Orion Wireframe flow discussion for onbording and lander portal. (super-admin discussion)
+   5. filed-master disussion 
+   7. DTS DPS discussion 
+   8. 
+-----------------------------------
+Leads Meeting - 23/7/2025
+
+- Discussion Point 
+    1. FiledMaster - 
+	2. RBAC - 
+
+
+Field master Detail Discussion.
+
+Core Data Model Overview.
+Directed asyclic Graph (DAG).
+Logical ER Diagram
+RBAC + UBAC + Path-based-access
+Report Templeate
+Token Strategy :- Supported Tokens
+Comments Strategy
+
+
+----------------------
+Bussiness Rule 
+
+1. Data Validation 
+2. Business Validation 
+3. Policy or regulatory validators.
+-------------------------
+24/7/2025
+1. only leads meeting - File manager discussion
+
+
+-------------------
+28/7/2025 Leads meeting 
+
+Meeting point
+1. Synfusion component update & status 
+2. chat integration
+3. open telemantory  -  
+                      3.1 user journey
+					  3.2 Logging 
+					  3.3 Audit 
+4. Field-Master
+5. Templeate POC
+6. OCR & OpenAI
+7. Backlog 
+8. CI/CD
+9. DB splitting 
+10. Encryption/Decryption 
+11. 
+
+
+
+---------------------
+31/7/2025 Frontend-leads meeting sammer & Rahul & Devendra 
+
+1. Word processor 
+
+Requirement 
+
+- ribbon control and customization
+- add Editor tool in word processor
+
+
+2. SpreadSheet 
+- ribbon tool hide.
+---------------
+
+8/7/2025
+
+Work update and work progress 
+1. 
+
+
+
+Note: When we upload CMA or financial-data then it can also be save in documents section.
+---------------
+
+
+Use of timeline component.
+proess
+version control 
+History 
+Audit Logging
+Jourany 
+
+-----------------------
+BOM meeting Plan 25/8/2025
+
+
+1. HAM - Hybrid Annuity Model
+
+
+
+------------
+17/9/2025
+ 
+Work update call 
+1. Trupti - Working on HAM Note 
+   issue: 
+		1.1 Bank wise logo 
+		1.2 Dynamic page no issue
+
+2. Yamini 
+    User Login flow PAPS And CAPS login flow 
+	
+3. Dipti 
+    Centralize Req res 
+	field Templeate 
+	
+----------------
+4. Vishal 
+
+     1. render Engine 
+	       conditional rendering 
+		   sync-fusion spreadsheet
+
+5. jayesh 
+     1. working on syncfusion core component 
+	 2. Date-picker issue resolved 
+	 3. pip for note-preview 
+	 4. open telementry for fronted 
+
+6. Atharva 
+    1. core componenet 
+	2. 
+	
+	
+	
+	
+	
+------------------------------------------------------------------------------------------------------------------------
+
+Internal Demo opal Application.
+
+ziticsbomlender@yopmail.com
+ziticstenantlender@yopmail.com  
+ziticssystemadmin1@yopmail.com
+
+
+dbsuser@yopmail.com
+testborroweruser@yopmail.com
+
+
+
+AAVCA7884N
+ 
+AACCH8828A
+ 
+AAQCM5388L
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------
+1. API integration? PAN GST etc validation.
+2. Document identifier - Textract Integration? Integrated into Borrower. 
+3. Flow: Lead Created -> Borrower Approved -> Assigned & Reviewed -> Converted or Rejected
+4. QUERY : Borrower cannot resolve the query. They will need to upload it and Lender will be able to close it.
+5. We will need to give some highlight when in Proposal Workspace so as to make user understand he is into a modal.
+6. Upload and download financial model using excel.
+7. Data integration across Lender & Borrower sync for Proposal Workspace section.
+8. Borrower Section: Selection of Organization should lead to enter into Organization Workspace and the header should show the name of the Organization
+9. The demo should be broken down into section linked with Flows - Lead, Proposal Preparation, Underwriting, Utilities, Borrower Management, Consortium, Documentation etc.
+10. Making Sarvam AI extraction precise to the required fields.
+
+11. 3 lead create in Borrower side.
+12. Re- direct page after borrower set password 
+13. Re-direct page after tennant(lender) set password.
+14. Lead Auto Save Implementation.
+15. One file upload in proccess and another file upload not working and application braking.
+16. Proposal Data pre-population.
+17. Financial is to much lacking need work smooth.
+18. UI fixes in lead UI.
+19. Lead assing and lead status proper management. 
+20. Lead created > lead submit > Lead qualifing > Lead Acceptance.
+21. Apprisal Note Section is not working found some error when open the page.

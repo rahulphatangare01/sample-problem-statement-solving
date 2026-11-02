@@ -1,0 +1,193 @@
+Development Dependancies;
+
+
+dependancy installation 
+    npm install depancy name 
+
+devlopment dependancy 
+    npm install dependancy --save-dev
+	
+	
+	
+
+
+NPx and NPM EXEC 
+ Directly execute pakcages.
+    npx --- node package executer
+	npm exec -- similar npx, with a slight difference in the way we pass arguments.
+	
+	
+Peer dependancy 
+  
+  
+Production :- 
+             We need to install clean packages 
+
+              npm clean-install 
+             we have to use in production only depancy not devDependancies
+			 npm i --omit=dev  
+			 other command npm prune --production
+			 
+			 
+workspace:- 
+           command for create work space 
+		   npm init -y -w packages/server -w packages/client
+           this command create struture like mono repo
+		   
+		   
+
+creating packages 
+         1. Private npm registery 
+		     https://www.npmjs.com/package/verdaccio
+		 
+		 other option 
+		     npm set registery 
+			 
+
+
+
+npm with Typescript 
+     
+	 
+	 
+	 creating own package using react with Ts  & @ @fluentui/react-components and for bundle using rollupjs now i have create button using fluentui/react-components
+	 and this button create custom style using  makestyle  and i have to acess this button in my application 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 Hello I am creating own npm package using react with template Ts & fluentui/react-components 
+	  now while creating own package i am internally use fluentui/react-components for devloping component this component for 
+	  creating package and my another application use my own package for devlopment 
+	  for this i need code in detail like tsconfig.json, rollup.confing.mjs, package.json in details with dependancy, devdependancy, peeer depency  and also one demo button code using custom style 
+	  
+	  npm install --save-peer
+	  
+	  
+	  
+	  
+	  https://github.com/rahulphatangare01/dev-core-ui
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  check registry 
+	  
+	  npm get registry   
+	  
+	  
+	  command   for private registry 
+	    run this command for installation   npm install --location=global verdaccio 
+		
+		after this run this command in cmd  --  verdaccio
+		get link in cmd  http://localhost:4873/
+		run this command  get link for create user 
+		
+		process for create user 
+		   .1 
+		   npm adduser --registry http://localhost:4873/
+		   paste this link in terminal 
+		   add username
+		   add password 
+		   add email 
+	  
+	  after this run this command 
+	  
+	     npm whoami  --registry http://localhost:4873/
+		 
+		 
+		 update registry 
+		 npm set registry http://localhost:4873/
+		 npm publish
+		 
+		 
+		 
+		 
+		   "main": "dist/cjs/index.js",
+		     "module": "dist/esm/index.js",
+
+
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+"react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^4.12.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-postcss": "^4.0.2"
+
+  }
+  
+  
+  
+  
+   "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahulphatangare01/self-made-core.git"
+  },
+  
+  npm pkg fix
+  
+  
+  
+  
+  
+  
+  
+  packages 
+  
+  1. @testing-library/jest-dom
+  2. @testing-library/react
+  3. @testing-library/user-event
+  4. @types/jest
+  5. @types/node
+  6. @types/react
+  7. react
+  8. react-dom
+  9. react-scripts
+  10.typescript
+  11. web-vitals
+  12.@types/react-dom
+  
+   "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },

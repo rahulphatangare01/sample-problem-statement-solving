@@ -1,0 +1,203 @@
+1. Introduction: 
+	> Hooks are reusable functions.
+	> Hooks are the functions which allows developer to use the React features like state and lifecycle of the components without using the class 	components.
+	> Hooks are only used with functions and not used with the classes.
+	> Hooks were added to React in version 16.8.
+____________________________________________________________________________________________________________________________________________________________
+2. How to use:
+	> You must import Hooks from react.
+	> Example:
+		> import React, { useState } from "react";
+		  function FavoriteColor() {
+  			const [color, setColor] = useState("red");
+  			return (
+    				<>
+    				</>
+  			);
+		  }
+____________________________________________________________________________________________________________________________________________________________
+3. Hooks Rules:
+	> There are 3 rules for hooks:
+		> Hooks can only be called inside React function components.
+		> Hooks can only be called at the top level of a component.
+		> Hooks cannot be conditional.
+___________________________________________________________________________________________________________________________________________
+4. Types of Hooks:
+	1. Predefined hooks
+	2. Custom hooks
+___________________________________________________________________________________________________________________________________________
+5. Custom hooks:
+	> When you have component logic that needs to be used by multiple components, we can extract that logic to a custom Hook.
+	> Steps to create and use custom hooks:
+		> Example: creating custom hook for fetching data "useFetch"
+			> create file "useFetch.js"
+			> //creating useFetch hook
+			  import { useState, useEffect } from "react";
+
+			  const useFetch = (url) => {
+  				const [data, setData] = useState(null);
+
+  				useEffect(() => {
+    					fetch(url)
+      					.then((res) => res.json())
+      					.then((data) => setData(data));
+  				}, [url]);
+
+  				return [data];
+			  };
+
+			  export default useFetch;
+			> //using useFetch hook
+			  import useFetch from "./useFetch";
+
+			  const Home = () => {
+  				const [data] = useFetch("https://jsonplaceholder.typicode.com/todos");
+
+  			  	return (
+    					<>
+      					{data &&
+        					data.map((item) => {
+          						return <p key={item.id}>{item.title}</p>;
+        					})}
+    					</>
+  				);
+			  };
+____________________________________________________________________________________________________________________________________________________________
+6. Predefined hooks:
+	> useState()
+	> useEffect()
+	> useRef()
+	> useNavigate() and useLocation()
+		> introduced in the React Router v6 to replace the useHistory() hook.
+		> It is used for navigating through different components and passing the data through components
+		> Used to implement the back button functionality.
+		> useLocation is used to get the data which is passed by useNavigate hook.
+		> using useNavigate hook
+			> npm install "react-router-dom"
+			> create "Home.js"
+ 			  import { useLocation, useNavigate } from "react-router-dom";
+
+			  export const Home =()=>{
+
+		 	  const navigate = useNavigate();
+
+  			  const location = useLocation();
+  			  console.log(location.state)
+
+  			  return(
+      				  <>
+            
+          			  <h1>This is Home.</h1>
+          			  <ul>
+              			  	<li>
+								<button onClick={()=>{navigate("/about", {state: {message: "Moved from Home to About."}})}}>About</button>
+							</li>
+                			<li>
+								<button onClick={()=>{navigate("/contact", {state: {message: "Moved from Home to Contact."}})}}>Contact</button>
+							</li>
+            				</ul>
+            					{true && <h1>{(location.state != null) && location.state.message}</h1>}
+        			</>
+    				);
+			}
+			> create "Navigation.js"
+			  import React from "react";
+			  import { BrowserRouter, Routes, Route } from "react-router-dom";
+			  import Home from "./components/Home";
+			  import About from "./components/About";
+ 
+			  function App() {
+    				return (
+        				<>
+            					<BrowserRouter>
+                					<Routes>
+                    						<Route
+                        						exact
+                        						path="/"
+                        						element={<Home />}
+                    						/>
+                    						<Route
+                        						exact
+                        						path="/about"
+                        						element={<About />}
+                    						/>
+                					</Routes>
+            					</BrowserRouter>
+        				</>
+    					);
+			  }
+	> context api
+		> It is a way to pass data through different components.
+		> Data can be accessible only to child of context provider.
+		> Example: Creating and using the context
+			> Create "A.js"
+			  import { createContext } from "react";
+			  import { B } from "../b/B";
+
+			  const FirstName = createContext();
+			  const LastName = createContext();
+
+			  export const A =()=>{
+
+
+		    	  return(
+        				<>
+            					<FirstName.Provider value={"Vishal "}>
+                					<LastName.Provider value={"Patil"}>
+                    						<B/>
+                					</LastName.Provider>
+            					</FirstName.Provider>
+        				</>
+    				);
+			  }
+
+			  export {FirstName, LastName};
+
+			> Create "B.js"
+			  import { D } from "../d/D";
+
+			  export const B =()=>{
+
+    			  return(
+        				<>
+            					<D/>
+        				</>
+    				);
+			  }
+			
+			> Create "C.js"
+			  import { D } from "../d/D";
+
+			  export const C =()=>{
+
+    			  return(
+        				<>
+            					<D/>
+        				</>
+    				);
+			  }
+
+			> Create "D.js"
+			  import { FirstName, LastName } from "../a/A";
+
+			  export const D =()=>{
+
+    				return(
+        				<>
+            					<FirstName.Consumer>
+                					{(fname)=>{
+                    						return(
+                        						<LastName.Consumer>
+                            							{(lname)=>{
+                                							return(
+                                    								<h1>Hi, {fname} {lname}</h1>
+                                								);
+                            								}}
+                        						</LastName.Consumer>
+                    							);
+                						}}
+            					</FirstName.Consumer>
+        				  </>
+    					);
+				}
+			

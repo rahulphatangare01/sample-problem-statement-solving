@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forest & Ocean Design System Showcase</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                primary: "#28745A",
+                primaryDark: "#18513F",
+                secondary: "#3D8FA3",
+                accent: "#F6C85F",
+                lightGreen: "#E7F3ED",
+                lightBlue: "#E7F4F7",
+                bg: "#FAFCFA",
+                text: "#26352F",
+                muted: "#6B7772",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #fafcfa;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 9999px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-brand-bg text-brand-text font-sans antialiased min-h-screen selection:bg-brand-lightGreen selection:text-brand-primary"
+  >
+    <!-- Top Navigation Header -->
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+      <!-- Hero Banner -->
+      <section
+        class="bg-gradient-to-r from-brand-lightGreen via-white to-brand-lightBlue rounded-3xl p-8 sm:p-10 border border-brand-primary/10 shadow-sm relative overflow-hidden"
+      >
+        <div
+          class="absolute -right-12 -bottom-12 w-64 h-64 rounded-full bg-brand-secondary/10 blur-3xl pointer-events-none"
+        ></div>
+        <div class="relative z-10 max-w-2xl">
+          <span
+            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-brand-accent/20 text-brand-primaryDark border border-brand-accent/30 mb-4"
+          >
+            <i class="ph-fill ph-sparkle text-brand-accent"></i> Design Token
+            Preview
+          </span>
+          <h2
+            class="text-3xl sm:text-4xl font-extrabold text-brand-primaryDark tracking-tight mb-3"
+          >
+            Natural, Trustworthy & Modern Color System
+          </h2>
+          <p class="text-brand-muted text-sm sm:text-base leading-relaxed">
+            Explore a cohesive palette combining deep forest greens with vibrant
+            ocean blue accents and sunny highlights. Click any swatch below to
+            quickly copy HEX codes to your clipboard.
+          </p>
+        </div>
+      </section>
+
+      <!-- Swatch Grid Section -->
+      <section id="swatches" class="space-y-6">
+        <div
+          class="flex flex-col sm:flex-row sm:items-center justify-between gap-4"
+        >
+          <div>
+            <h2
+              class="text-xl font-bold text-brand-primaryDark flex items-center gap-2"
+            >
+              <i class="ph-bold ph-swatch text-brand-primary"></i> Color Tokens
+            </h2>
+            <p class="text-xs text-brand-muted">
+              Search or filter swatches by functional category
+            </p>
+          </div>
+
+          <!-- Filter Controls -->
+          <div class="flex flex-wrap items-center gap-2">
+            <div class="relative flex-1 sm:w-64">
+              <i
+                class="ph-bold ph-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-brand-muted text-sm"
+              ></i>
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Search tokens..."
+                class="w-full pl-9 pr-3 py-1.5 text-xs bg-white border border-black/10 rounded-xl focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-all"
+              />
+            </div>
+            <div
+              class="flex items-center gap-1 bg-white p-1 border border-black/10 rounded-xl text-xs font-medium"
+            >
+              <button
+                data-filter="all"
+                class="filter-btn active px-3 py-1 rounded-lg bg-brand-primary text-white transition-all"
+              >
+                All
+              </button>
+              <button
+                data-filter="brand"
+                class="filter-btn px-3 py-1 rounded-lg text-brand-muted hover:text-brand-text transition-all"
+              >
+                Brand
+              </button>
+              <button
+                data-filter="surface"
+                class="filter-btn px-3 py-1 rounded-lg text-brand-muted hover:text-brand-text transition-all"
+              >
+                Surface
+              </button>
+              <button
+                data-filter="text"
+                class="filter-btn px-3 py-1 rounded-lg text-brand-muted hover:text-brand-text transition-all"
+              >
+                Text
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Swatch Grid -->
+        <div
+          id="swatchesGrid"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
+        >
+          <!-- Cards injected via JavaScript -->
+        </div>
+      </section>
+
+      <!-- Live UI Mockup Section -->
+      <section id="mockup" class="space-y-6 pt-6 border-t border-black/5">
+        <div
+          class="flex flex-col sm:flex-row sm:items-center justify-between gap-2"
+        >
+          <div>
+            <h2
+              class="text-xl font-bold text-brand-primaryDark flex items-center gap-2"
+            >
+              <i class="ph-bold ph-layout text-brand-primary"></i> Live UI
+              Component Mockup
+            </h2>
+            <p class="text-xs text-brand-muted">
+              See how all tokens harmoniously build practical application
+              layouts
+            </p>
+          </div>
+        </div>
+
+        <!-- Application Frame Container -->
+        <div
+          class="bg-white rounded-3xl border border-black/10 shadow-xl overflow-hidden"
+        >
+          <!-- Application Header -->
+          <div
+            class="bg-brand-primaryDark text-white px-6 py-4 flex flex-wrap items-center justify-between gap-4 border-b border-white/10"
+          >
+            <div class="flex items-center gap-3">
+              <div
+                class="w-8 h-8 rounded-lg bg-brand-primary flex items-center justify-center text-white font-bold border border-white/20"
+              >
+                <i class="ph-bold ph-leaf"></i>
+              </div>
+              <span class="font-bold text-sm tracking-wide"
+                >GreenPulse Workspace</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-4 text-xs font-medium text-white/80"
+            >
+              <span
+                class="hover:text-white cursor-pointer transition-colors border-b-2 border-brand-accent pb-0.5 text-white"
+                >Dashboard</span
+              >
+              <span class="hover:text-white cursor-pointer transition-colors"
+                >Analytics</span
+              >
+              <span class="hover:text-white cursor-pointer transition-colors"
+                >Settings</span
+              >
+            </div>
+            <div class="flex items-center gap-3">
+              <span
+                class="text-xs px-2.5 py-1 rounded-full bg-brand-accent text-brand-primaryDark font-bold"
+                >PRO PLAN</span
+              >
+              <div
+                class="w-8 h-8 rounded-full bg-brand-lightGreen/20 border border-white/30 flex items-center justify-center text-xs font-bold"
+              >
+                JS
+              </div>
+            </div>
+          </div>
+
+          <!-- Dashboard Workspace Body -->
+          <div class="p-6 sm:p-8 bg-brand-bg space-y-6">
+            <!-- Banner inside UI -->
+            <div
+              class="flex flex-col md:flex-row md:items-center justify-between bg-brand-lightGreen p-6 rounded-2xl border border-brand-primary/10 gap-4"
+            >
+              <div class="space-y-1">
+                <span
+                  class="inline-block text-[11px] font-bold tracking-wider uppercase text-brand-primary"
+                  >Quarterly Goal</span
+                >
+                <h3 class="text-lg font-bold text-brand-primaryDark">
+                  Sustainability Metric Dashboard
+                </h3>
+                <p class="text-xs text-brand-muted">
+                  All targets achieved for Q3. Carbon offset up by 24% across
+                  projects.
+                </p>
+              </div>
+              <div class="flex items-center gap-2">
+                <button
+                  class="px-4 py-2 bg-brand-primary hover:bg-brand-primaryDark text-white text-xs font-bold rounded-xl shadow-sm transition-all flex items-center gap-1.5"
+                >
+                  <i class="ph-bold ph-plus-circle"></i> Create Report
+                </button>
+                <button
+                  class="px-4 py-2 bg-white hover:bg-gray-50 text-brand-text text-xs font-bold rounded-xl border border-black/10 transition-all"
+                >
+                  Export
+                </button>
+              </div>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+              <!-- Card 1: Light Green Surface -->
+              <div
+                class="bg-brand-lightGreen/60 border border-brand-primary/15 rounded-2xl p-5 flex flex-col justify-between space-y-4"
+              >
+                <div class="flex items-center justify-between">
+                  <span
+                    class="text-xs font-bold text-brand-primary uppercase tracking-wide"
+                    >Energy Saver</span
+                  >
+                  <span
+                    class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-accent text-brand-primaryDark"
+                    >Active</span
+                  >
+                </div>
+                <div>
+                  <p class="text-2xl font-extrabold text-brand-primaryDark">
+                    1,482 kWh
+                  </p>
+                  <p class="text-xs text-brand-muted mt-1">
+                    +18.4% optimized this month
+                  </p>
+                </div>
+                <div
+                  class="w-full bg-white/80 h-2 rounded-full overflow-hidden"
+                >
+                  <div class="bg-brand-primary h-full w-3/4 rounded-full"></div>
+                </div>
+              </div>
+
+              <!-- Card 2: Light Blue Surface -->
+              <div
+                class="bg-brand-lightBlue/60 border border-brand-secondary/20 rounded-2xl p-5 flex flex-col justify-between space-y-4"
+              >
+                <div class="flex items-center justify-between">
+                  <span
+                    class="text-xs font-bold text-brand-secondary uppercase tracking-wide"
+                    >Water Recycled</span
+                  >
+                  <span
+                    class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-secondary text-white"
+                    >Optimal</span
+                  >
+                </div>
+                <div>
+                  <p class="text-2xl font-extrabold text-brand-text">8,920 L</p>
+                  <p class="text-xs text-brand-muted mt-1">
+                    Conservation level high
+                  </p>
+                </div>
+                <div
+                  class="w-full bg-white/80 h-2 rounded-full overflow-hidden"
+                >
+                  <div
+                    class="bg-brand-secondary h-full w-4/5 rounded-full"
+                  ></div>
+                </div>
+              </div>
+
+              <!-- Card 3: White Surface -->
+              <div
+                class="bg-white border border-black/10 rounded-2xl p-5 flex flex-col justify-between space-y-4 shadow-sm"
+              >
+                <div class="flex items-center justify-between">
+                  <span
+                    class="text-xs font-bold text-brand-muted uppercase tracking-wide"
+                    >Pending Review</span
+                  >
+                  <span
+                    class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-gray-100 text-brand-muted"
+                    >3 Items</span
+                  >
+                </div>
+                <div>
+                  <p class="text-2xl font-extrabold text-brand-text">98.2%</p>
+                  <p class="text-xs text-brand-muted mt-1">
+                    Audit compliance score
+                  </p>
+                </div>
+                <div class="flex items-center gap-2 pt-1">
+                  <button
+                    class="w-full py-1.5 bg-brand-secondary text-white text-xs font-semibold rounded-lg hover:bg-brand-secondary/90 transition-all"
+                  >
+                    Review All
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Accessibility Matrix Section -->
+      <section
+        id="accessibility"
+        class="space-y-6 pt-6 border-t border-black/5"
+      >
+        <div>
+          <h2
+            class="text-xl font-bold text-brand-primaryDark flex items-center gap-2"
+          >
+            <i class="ph-bold ph-eye text-brand-primary"></i> Accessibility &
+            Legibility Tester
+          </h2>
+          <p class="text-xs text-brand-muted">
+            Inspect real-time contrast pairs against primary surface backgrounds
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Surface 1: Background (#FAFCFA) -->
+          <div
+            class="bg-brand-bg border border-black/10 rounded-2xl p-5 space-y-3"
+          >
+            <div
+              class="flex items-center justify-between border-b border-black/5 pb-2"
+            >
+              <span class="text-xs font-bold text-brand-text"
+                >Background (#FAFCFA)</span
+              >
+              <span
+                class="text-[10px] font-mono bg-white px-2 py-0.5 rounded border border-black/10"
+                >Base Surface</span
+              >
+            </div>
+            <div class="space-y-2">
+              <div>
+                <p class="text-brand-text font-bold text-sm">
+                  Primary Text (#26352F)
+                </p>
+                <p class="text-[11px] text-brand-muted">
+                  Clean high legibility body content.
+                </p>
+              </div>
+              <div class="pt-2 border-t border-black/5">
+                <p class="text-brand-muted font-medium text-xs">
+                  Muted Text (#6B7772)
+                </p>
+                <p class="text-[10px] text-brand-muted">
+                  Secondary descriptions & labels.
+                </p>
+              </div>
+              <div class="pt-2 border-t border-black/5">
+                <p class="text-brand-primary font-bold text-xs">
+                  Primary Link (#28745A)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Surface 2: Light Green (#E7F3ED) -->
+          <div
+            class="bg-brand-lightGreen border border-brand-primary/10 rounded-2xl p-5 space-y-3"
+          >
+            <div
+              class="flex items-center justify-between border-b border-brand-primary/10 pb-2"
+            >
+              <span class="text-xs font-bold text-brand-primaryDark"
+                >Light Green (#E7F3ED)</span
+              >
+              <span
+                class="text-[10px] font-mono bg-white/60 px-2 py-0.5 rounded border border-brand-primary/10"
+                >Soft Card</span
+              >
+            </div>
+            <div class="space-y-2">
+              <div>
+                <p class="text-brand-text font-bold text-sm">
+                  Text Color (#26352F)
+                </p>
+                <p class="text-[11px] text-brand-muted">
+                  Excellent body text contrast.
+                </p>
+              </div>
+              <div class="pt-2 border-t border-brand-primary/10">
+                <p class="text-brand-primaryDark font-bold text-xs">
+                  Deep Green Accent (#18513F)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Surface 3: Light Blue (#E7F4F7) -->
+          <div
+            class="bg-brand-lightBlue border border-brand-secondary/15 rounded-2xl p-5 space-y-3"
+          >
+            <div
+              class="flex items-center justify-between border-b border-brand-secondary/10 pb-2"
+            >
+              <span class="text-xs font-bold text-brand-secondary"
+                >Light Blue (#E7F4F7)</span
+              >
+              <span
+                class="text-[10px] font-mono bg-white/60 px-2 py-0.5 rounded border border-brand-secondary/10"
+                >Soft Card</span
+              >
+            </div>
+            <div class="space-y-2">
+              <div>
+                <p class="text-brand-text font-bold text-sm">
+                  Text Color (#26352F)
+                </p>
+                <p class="text-[11px] text-brand-muted">
+                  Great readability on blue tint.
+                </p>
+              </div>
+              <div class="pt-2 border-t border-brand-secondary/10">
+                <p class="text-brand-secondary font-bold text-xs">
+                  Ocean Blue Accent (#3D8FA3)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Surface 4: Primary Dark (#18513F) -->
+          <div
+            class="bg-brand-primaryDark text-white border border-black/10 rounded-2xl p-5 space-y-3"
+          >
+            <div
+              class="flex items-center justify-between border-b border-white/10 pb-2"
+            >
+              <span class="text-xs font-bold text-white"
+                >Deep Green (#18513F)</span
+              >
+              <span
+                class="text-[10px] font-mono bg-white/10 px-2 py-0.5 rounded text-white/80"
+                >Dark Surface</span
+              >
+            </div>
+            <div class="space-y-2">
+              <div>
+                <p class="text-white font-bold text-sm">White Text (#FFFFFF)</p>
+                <p class="text-[11px] text-white/70">
+                  High contrast header text.
+                </p>
+              </div>
+              <div class="pt-2 border-t border-white/10">
+                <p class="text-brand-accent font-bold text-xs">
+                  Sunshine Yellow (#F6C85F)
+                </p>
+                <p class="text-[10px] text-white/70">
+                  Vibrant highlight badge.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Toast Notification Container -->
+    <div
+      id="toast"
+      class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none"
+    >
+      <div
+        class="bg-brand-primaryDark text-white px-4 py-3 rounded-xl shadow-2xl flex items-center gap-3 border border-white/10"
+      >
+        <div
+          class="w-6 h-6 rounded-full bg-brand-accent text-brand-primaryDark flex items-center justify-center font-bold text-xs"
+        >
+          <i class="ph-bold ph-check"></i>
+        </div>
+        <div>
+          <p id="toastMessage" class="text-xs font-semibold">
+            Color copied to clipboard!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="mt-16 border-t border-black/5 bg-white py-6">
+      <div class="max-w-7xl mx-auto px-4 text-center text-xs text-brand-muted">
+        Forest & Ocean Palette Preview • Built with Tailwind CSS
+      </div>
+    </footer>
+
+    <script>
+      // Palette Tokens Definition
+      const colorTokens = [
+        {
+          role: "Primary",
+          name: "Forest/Trust Green",
+          hex: "#28745A",
+          category: "brand",
+          textLight: true,
+          desc: "Main brand color for buttons, key headings, and active indicators.",
+        },
+        {
+          role: "Primary Dark",
+          name: "Deep Green",
+          hex: "#18513F",
+          category: "brand",
+          textLight: true,
+          desc: "Hover states, header backgrounds, and deep structural surfaces.",
+        },
+        {
+          role: "Secondary",
+          name: "Ocean Blue",
+          hex: "#3D8FA3",
+          category: "brand",
+          textLight: true,
+          desc: "Secondary actions, alternative badges, and graph accents.",
+        },
+        {
+          role: "Accent",
+          name: "Sunshine Yellow",
+          hex: "#F6C85F",
+          category: "brand",
+          textLight: false,
+          desc: "Attention badges, callouts, and highlighted notifications.",
+        },
+        {
+          role: "Light Green",
+          name: "Mint Tint",
+          hex: "#E7F3ED",
+          category: "surface",
+          textLight: false,
+          desc: "Soft surface background for metric cards and highlight boxes.",
+        },
+        {
+          role: "Light Blue",
+          name: "Sky Tint",
+          hex: "#E7F4F7",
+          category: "surface",
+          textLight: false,
+          desc: "Secondary card surfaces, table headers, and pill backgrounds.",
+        },
+        {
+          role: "Background",
+          name: "Warm Off-White",
+          hex: "#FAFCFA",
+          category: "surface",
+          textLight: false,
+          desc: "Main application body background for calm reading comfort.",
+        },
+        {
+          role: "Text",
+          name: "Deep Charcoal Green",
+          hex: "#26352F",
+          category: "text",
+          textLight: true,
+          desc: "High legibility main typography color replacing harsh pure black.",
+        },
+        {
+          role: "Muted",
+          name: "Slate Gray Green",
+          hex: "#6B7772",
+          category: "text",
+          textLight: true,
+          desc: "Subtitles, disabled states, borders, and secondary labels.",
+        },
+      ];
+
+      const swatchesGrid = document.getElementById("swatchesGrid");
+      const toast = document.getElementById("toast");
+      const toastMessage = document.getElementById("toastMessage");
+      let toastTimeout;
+
+      // Show Toast Function
+      function showToast(msg) {
+        toastMessage.textContent = msg;
+        toast.classList.remove(
+          "translate-y-20",
+          "opacity-0",
+          "pointer-events-none",
+        );
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
+          toast.classList.add(
+            "translate-y-20",
+            "opacity-0",
+            "pointer-events-none",
+          );
+        }, 2500);
+      }
+
+      // Render Swatches
+      function renderSwatches(items) {
+        swatchesGrid.innerHTML = "";
+        items.forEach((token) => {
+          const card = document.createElement("div");
+          card.className =
+            "bg-white rounded-2xl border border-black/10 overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 group flex flex-col justify-between";
+
+          card.innerHTML = `
+          <div>
+            <!-- Swatch Color Box -->
+            <div 
+              class="h-28 w-full relative cursor-pointer flex items-end p-3 transition-transform group-hover:scale-[1.01]" 
+              style="background-color: ${token.hex};"
+              onclick="copyToClipboard('${token.hex}', '${token.name}')"
+            >
+              <button class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity bg-black/30 backdrop-blur-sm text-white px-2.5 py-1 rounded-lg text-xs font-semibold flex items-center gap-1 hover:bg-black/50">
+                <i class="ph-bold ph-copy"></i> Copy
+              </button>
+              <span class="text-[10px] font-bold tracking-wider uppercase px-2 py-0.5 rounded ${token.textLight ? "bg-white/20 text-white backdrop-blur-sm" : "bg-black/20 text-brand-text backdrop-blur-sm"}">
+                ${token.role}
+              </span>
+            </div>
+
+            <!-- Swatch Content -->
+            <div class="p-4 space-y-2">
+              <div class="flex items-center justify-between">
+                <h3 class="font-bold text-brand-text text-base">${token.name}</h3>
+                <span 
+                  onclick="copyToClipboard('${token.hex}', '${token.name}')" 
+                  class="font-mono text-xs font-semibold px-2 py-1 rounded bg-brand-bg border border-black/5 cursor-pointer hover:bg-brand-lightGreen hover:text-brand-primary transition-colors"
+                >
+                  ${token.hex}
+                </span>
+              </div>
+              <p class="text-xs text-brand-muted leading-relaxed">${token.desc}</p>
+            </div>
+          </div>
+
+          <div class="px-4 pb-4 pt-1 border-t border-black/5 flex items-center justify-between text-[11px] text-brand-muted">
+            <span class="capitalize">Category: <strong>${token.category}</strong></span>
+            <button onclick="copyToClipboard('${token.hex}', '${token.name}')" class="text-brand-primary font-semibold hover:underline flex items-center gap-1">
+              Copy HEX <i class="ph-bold ph-arrow-right"></i>
+            </button>
+          </div>
+        `;
+          swatchesGrid.appendChild(card);
+        });
+      }
+
+      // Copy to Clipboard Handler
+      function copyToClipboard(hex, name) {
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(hex).then(() => {
+            showToast(`Copied ${name} (${hex}) to clipboard!`);
+          });
+        } else {
+          const textarea = document.createElement("textarea");
+          textarea.value = hex;
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand("copy");
+          document.body.removeChild(textarea);
+          showToast(`Copied ${name} (${hex}) to clipboard!`);
+        }
+      }
+
+      // Initial Render
+      renderSwatches(colorTokens);
+
+      // Filtering Logic
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterBtns.forEach((b) => {
+            b.classList.remove("active", "bg-brand-primary", "text-white");
+            b.classList.add("text-brand-muted");
+          });
+          btn.classList.add("active", "bg-brand-primary", "text-white");
+          btn.classList.remove("text-brand-muted");
+
+          const filter = btn.getAttribute("data-filter");
+          if (filter === "all") {
+            renderSwatches(colorTokens);
+          } else {
+            const filtered = colorTokens.filter((t) => t.category === filter);
+            renderSwatches(filtered);
+          }
+        });
+      });
+
+      // Search Logic
+      const searchInput = document.getElementById("searchInput");
+      searchInput.addEventListener("input", (e) => {
+        const query = e.target.value.toLowerCase();
+        const filtered = colorTokens.filter(
+          (t) =>
+            t.name.toLowerCase().includes(query) ||
+            t.role.toLowerCase().includes(query) ||
+            t.hex.toLowerCase().includes(query),
+        );
+        renderSwatches(filtered);
+      });
+
+      // Copy All Variables Handler
+      document.getElementById("copyAllTokens").addEventListener("click", () => {
+        const cssVars = colorTokens
+          .map(
+            (t) =>
+              `  --color-${t.role.toLowerCase().replace(/[^a-z0-9]/g, "-")}: ${t.hex};`,
+          )
+          .join("\n");
+        const result = `:root {\n${cssVars}\n}`;
+        copyToClipboard(result, "All CSS Variables");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+NVM 
+NVM stands for Node Version Manager which is a tool used for installing Node.
+js and using the Node.js versions of your choice.
+It helps to switch between Node.
+js versions while also allowing to work with multiple NPM versions.
+
+
+Follow this link for installation process
+     https://www.geeksforgeeks.org/how-to-install-and-use-nvm-on-windows/
+	 
+	 
+	nvm list  ( Checking node version list)
+	nvm use version   ( adding version )
+	nvm install version (install version)
+    	

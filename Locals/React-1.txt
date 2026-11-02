@@ -1,0 +1,149 @@
+
+--------------------------- REACT UNDERSTANDING --------------------------------------------
+For handling of view layerof our application using react
+Application has  the modal View & Controller.
+react is use for create lagre scale application.
+
+
+Reac Js
+ react is open sourece Js library for creating user interfaces.
+ It's Library not Framwork.
+ Used for handling "view" layer of application.
+ Allows us to create lagre web applicationsm,that change data witout reloading the webpage.
+ 
+ 
+
+------------------------- CREATING REACT APPLICATION ---------------------------------------
+
+Creating React app using vite
+ 
+    step 1.  npm create vite
+             
+	step 2. name for app ex:- demo-app
+	         
+			  -- cd demo-app 
+	          -- npm install 
+			  -- npm run dev
+			  
+			  
+---------------------- HOW REACT APP WORKS -------------------------------------------------------
+React app called as single page application.
+     in entire project we have only one HTMl file.
+	 
+	 in that main.jsx is the first file read when server run 
+	     after that app.jsx file run 
+		 
+		index.html is the SPA
+		package.json is the file containing all dependencies for application 
+		package-lock-json is the file containing all version lock for this application					
+		
+
+----------------------- CREATING COMPONENT IN REACT -------------------------------------------------
+
+   Component is nothing but the function  
+   Creating component in react is start with capital letter for ex:- Hero.jsx
+      reason behind this we could distinguish between the HTML tages and components
+	  
+
+
+---------------------- AUTO FORMAT REACT CODE WITH PRETTIER ------------------------------------
+Pritter code formatter 
+
+
+-----------------------  JSX IN REACT -----------------------------------------------------------
+   JSX stands for JS XML. It is a syntax extension to JS.
+   JSX is a preprocessor step that adds XML syntax to Js.
+   JSX produces React 'element'. Its possible Create element without jsx but jsx makes react lot more elegate.
+   Jsx is eaiser to read and write. Babel transform these into a actual Js Code. 
+   
+           JavaScript Expression in JSX
+		       We can put any valid JS expression inside the curly braces in JSX. you can pass any JS expression as children,
+			   by enclosing it within {}.
+			   
+			   Syntax:- {expression}
+			   EX:-  
+			      const el = <h1>{10+20} </h1>
+
+
+
+
+------------------------- REUSEABLITY OF COMPONENT -------------------------------------------------
+
+    Reasons for why we use component in react 
+	                     1.Modularity of code.
+						 2. Abstraction 
+						     simply mean of hiding away the ugly details of implementation.
+							 
+							 
+
+------------------------ Props in react -------------------------------------------------------------
+  values which are passed to this compoent to make those components dynamic. 
+  
+							 
+
+
+Destruturing Props 
+  simply means when you have a certain object & certain value inside the object. out those values sepratly so without accessing
+  that particular object 
+  
+   we we pass value from one component to other component then its come in reciver component as object in that object we can destrure
+   in reciver component function as key pass pass in function and use in jsx 
+      Ex:-
+	  passing componet
+	  function app (){
+	  <Nav  name='ram', message='hello' />
+	  }
+	  reciving component 
+	  function Nav({name, message}){
+	  <h1>  {message} {name} </h1>
+	  }
+
+
+Immutablity of props
+     props are use read-only means they can not be mutated or written to we can not not modify props.
+	 
+	  
+Passing Arrays & object to components using Props
+Rendering array using map 
+Rendering Array of object
+Rendering component Inside A loop
+Conditionally Rendering JSX & components
+Conditionally Rendering using Element Variables
+Ternary Operator in React
+conditionaly rendering List
+conditionaly rendering a message Using Ternary
+Event handling in REACT
+
+
+
+----------------------
+state in react 
+    why use state in react?
+	      Props are immutable
+		  value which can change dynamically.
+		  props are immutable
+		  State can be changed.
+		  Props are like Paramenters passed to function
+		  State is like a variable declared in function body.
+		  
+		  
+	state is nothing but it's an object which is going to hold the data related to a specfic component and value of state could
+	be dynamically throughout the life cylce of a component.
+	state is nothing but an object which can holds the data information which control behaviour of component.
+	
+	
+	
+Create simple counter application 
+Handling input field in react 
+Handling multiple input in react
+
+	
+	
+	
+	
+	
+	
+Data passing in react 
+   1. Parent to child data passing -- Using props
+   2. child to parent data passing -- using callback
+   3. chid to child data passing 

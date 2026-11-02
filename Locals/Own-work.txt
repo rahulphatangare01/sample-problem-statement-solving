@@ -1,0 +1,120 @@
+
+28/3/24
+ 1. Create task for team 
+ 2. Create validation for Email, mobile,password 
+ 3. code merge for mobile no, email id 
+ 4. code merge ZLContainer  with Aathrav 
+ 5. Zpassword component code merge 
+ 6. login page 
+ 
+ 
+ 
+
+29/3/24
+
+create login page UI
+add validation for login page 
+start working on Api service 
+start working on data service 
+
+
+1/4/24
+create task for team 
+login page data service working.
+login page working with login service 
+
+Core UI code merge with Chetan
+Understanding package i18n next react-next
+intigrtate I18next in login page
+ 
+
+2/4/2024
+
+create task for team
+login api intigrated
+ZInput check requiremnt collect
+resolve aathrav & Jayesh project installation issue 
+media platform folder and flow understanding and working 
+core packages remove unwanted package
+Auth-web-Ui create build localy also deploy 
+Resolve testing axios issue 
+font family issue core 
+
+
+
+3/4/2024
+
+Create task for team 
+Login User issue for double click 
+statred wotking on auth routing  (Login)
+
+4/4/2024
+create task for team 
+
+create build for login also hosted using dev branch
+started implementing Auth routing 
+
+Core
+added api end point in utils also access in auth 
+code merge for forward ref and toaster
+Password input validation for border working 
+
+5/4/2024
+
+
+Create task for team 
+code merge for toast
+add validation for password and confirm passowrd for set password
+Tost code merge in Auth toast is working 
+Paps build issue reolved
+code merge for paps register
+after login 
+
+
+
+8/4/2023
+Create task for team also clear the task 
+
+add layout for paps
+create folder struture for Forgot password
+working on server deployment issue
+
+Refactor Core code 
+resolve build issue for Paps as well as Auth
+code merge for ZLContainer
+
+9/4/2023
+create task for team 
+media file discriprion for vishal
+set-password api intigration 
+set-password api local testing with backend team 
+code revert for paps issue in code so resolve this issue
+
+
+
+
+
+
+
+
+
+
+
+10/4/2024
+
+create task for team also distribute task 
+resolve input changes for validation.
+changes validation for password, pan, aadhar
+changes span ref in core 
+
+media file for font css
+
+
+
+
+npm i i18next-browser-languagedetector
+npm install react-i18next i18next --save
+
+
+https://www.i18next.com/overview/getting-started
+https://refactoring.guru/refactoring/what-is-refactoring

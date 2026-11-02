@@ -1,0 +1,55 @@
+SERVER:-
+
+EkS (Elastic kubernate service)
+Docker --  Images
+Aws-- EBS (Elastic beanstalk)
+
+Servr pricing 
+RDS- 
+Aroroa - 
+rabbitmq - 
+Ec2 specification
+
+
+
+
+DATABASE
+mySql--- RDS (Relational DataBase)
+
+
+
+
+BACKEND 
+Notification JCB (Firebase)
+
+Cache management
+Redis
+RabbitMq ---Que management
+
+
+testing 
+performance testing 
+
+ -- Encryptio & Decription --------------------------------------------------------
+Encryption Decription 
+
+ Encryption Decription using Crypto.js
+ algorithm for Encryption Decription 
+  1. SHA256
+  2. AES
+  
+		  Use AES for encryption and decryption of confidential data.
+		  Use SHA256 for hashing data to verify its integrity.
+		  md5
+		  AES2
+		  
+		  
+		  key of rotation 
+		  
+		  
+		  
+		  input ---> Encrypted ----> pass to Api 
+		  
+
+  -- data save methods-----------------------------------------------------------------------
+   

@@ -1,0 +1,29 @@
+Folder Stucture
+          | public 
+          | Src
+		      | apps
+			       | pages
+                   | PAPS
+				        | components
+						           | ContextBar
+								   | DataSection
+								   | MenuSection
+								   | Navbar
+								   | organization
+								                | AllOrganization 
+                                                | CreateOrganization
+                                                | OrganizationStatus                             												
+						| Layout      
+						| Modal
+						      | confirmationModal
+							  | sendRequestModal
+                   | Register
+                   | Service
+                   				   
+			  | assets
+			  
+			  | routes
+			  | store
+			  | utils
+			  | hooks
+			  

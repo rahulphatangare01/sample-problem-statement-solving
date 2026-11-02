@@ -1,0 +1,1407 @@
+
+
+APPROACH
+------------------------------------------------------------------
+1. Create Json  for component  --  add Security 
+2. Create React component 
+3. Call Render in Return in React component 
+4. intial of useEffect for load Json in Component 
+5. create state for form Data 
+6. create component props for layout 
+7. create handleSubmit method for form Submit 
+8. Create handle change for value change in form 
+9. call masterData from Store 
+10. create state for store handle data 
+11. call masterData in useEffect and handle conditional masterData for field 
+12. create validation for form Submit and required value 
+13. create dispatch for pass data component to store 
+14. create slice for respective section
+15. initialization of slice in store  
+16. create mutation for respective section 
+17. create thunk call for respective section 
+18. return response of thunk to store and store to component
+------------------------------------------------------------------------------
+PERSONAL WORK UPDATE
+
+21/11/24
+
+sr     Task Name Jira                                       Ticket Id                                                 work log 
+1.     Create Mutation for Create Notes                     https://zitics.atlassian.net/browse/WP-114                0.5h  from 2 pm 
+2.     Create Mutation for Create Task                      https://zitics.atlassian.net/browse/WP-115                0.5h 
+3.     Create Slice for Notes                               https://zitics.atlassian.net/browse/WP-116                1.5h
+4.     API integration for Create Notes                     https://zitics.atlassian.net/browse/WP-119                1.h
+5.     API integration for get List of notes                https://zitics.atlassian.net/browse/WP-120                1.h
+6.     Create Queary for get List of Note                   https://zitics.atlassian.net/browse/WP-150                15m 
+7.     Create Queary for List of Task                       https://zitics.atlassian.net/browse/WP-151                15m
+
+
+
+22/11/24
+1.    Create Slice for Tasks                                https://zitics.atlassian.net/browse/WP-117                 1.5h from 11am
+2.    API integration for get list of tasks                 https://zitics.atlassian.net/browse/WP-132                 1 h
+3.    API integration for update Notes                      https://zitics.atlassian.net/browse/WP-133                  1.5h 
+4.    Create UI for delete Notes                            https://zitics.atlassian.net/browse/WP-136                  30m 
+5.    API integration for delete Notes                      https://zitics.atlassian.net/browse/WP-138                  1h 
+6.    Create Mutation for delete Notes                      https://zitics.atlassian.net/browse/WP-142                  15m 
+7.    Create Mutation for delete Task                       https://zitics.atlassian.net/browse/WP-143                  15m 
+8.    Create Mutation for update Note                       https://zitics.atlassian.net/browse/WP-146                  15m 
+9.    Create mutation for update Task                       https://zitics.atlassian.net/browse/WP-147                  15m 
+
+
+25/11/24
+1. Store Issue for Create Section                           https://zitics.atlassian.net/browse/WP-165                   3h
+2. Pending Issue and Bugs testing and confirmation          https://zitics.atlassian.net/browse/WP-168                   3h 
+3. Create Build and Build Update - 25/11/24                 https://zitics.atlassian.net/browse/WP-167                   2h
+
+
+26/11/24 
+1. Task Create Slice and API issue                          https://zitics.atlassian.net/browse/WP-172                   1h
+2. folder Structure for documentation                       https://zitics.atlassian.net/browse/WP-175                   30m
+3. Create Support section UI                                https://zitics.atlassian.net/browse/WP-177                   2.5h
+4. Create Build and Build Update - 26/11/2024               https://zitics.atlassian.net/browse/WP-184                    2h 
+
+27/11/24
+1. Plan meeting upto 1 pm 
+2. Apply Header Strip for present proposal                  https://zitics.atlassian.net/browse/WP-185                    1.5h
+3. Context Menu Avtar Changes                               https://zitics.atlassian.net/browse/WP-191                    1.5h
+4. meeting with Lead                                                                                                      30m
+5. meeting with lead and devendra                                                                                         30m 
+6. Add Task API changes as per updated Design               https://zitics.atlassian.net/browse/WP-192                    2h
+7. React Grid Core component development                    https://zitics.atlassian.net/browse/WP-188                    2h
+8. Create Build and Build Update 27/11/2024                 https://zitics.atlassian.net/browse/WP-197                    2h
+
+
+28/11/24
+1.  Resolve Key Issue in development Tool                   https://zitics.atlassian.net/browse/WP-201                     1h
+2.  Create build and Build Update 28/11/2024                https://zitics.atlassian.net/browse/WP-206                     2h
+3.  React Grid Core component development                   https://zitics.atlassian.net/browse/WP-188                     3h
+4.  Resolve Key Issue in development Tool                   https://zitics.atlassian.net/browse/WP-201                     1h
+
+
+29/11/24
+1. create subsidy update subsidy negative value for amount validation  https://zitics.atlassian.net/browse/WP-208         30m 
+2. Dev Server Testing Interim Testing with Product Owner                https://zitics.atlassian.net/browse/WP-211         1.5h 
+3. Create build and Build Update 29/11/2024                             https://zitics.atlassian.net/browse/WP-215         2h
+4. Create Test Server Up to support Tool                               https://zitics.atlassian.net/browse/WP-216         1h 
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+2/12/2024 - DONE
+1. Present proposal added save saved for action                       https://zitics.atlassian.net/browse/WP-226             1.5h
+2. Code Optimization for present proposal                             https://zitics.atlassian.net/browse/WP-92              4h 
+3. Create CAPS Application                                            https://zitics.atlassian.net/browse/CAPS-2             30m 
+4. create folder structure for application                            create folder structure for application                1h
+
+
+
+3/12/2024 - DONE
+1. Present proposal added save saved for action                      https://zitics.atlassian.net/browse/WP-226               2.5h 
+2. Add multiple registry in PAPS                                     https://zitics.atlassian.net/browse/WP-224               3.5h
+3. Create build and Build update 3/12/2023                           https://zitics.atlassian.net/browse/WP-225               1h
+4. Create UI for Navbar                                              https://zitics.atlassian.net/browse/CAPS-5               30m
+5. Create UI for Sidebar                                             https://zitics.atlassian.net/browse/CAPS-6               30m
+
+
+
+4/12/2024 - DONE
+1. Create build and Build update 4/12/2024                          https://zitics.atlassian.net/browse/WP-231                1.5h
+2. Address API integration using Pincode                            https://zitics.atlassian.net/browse/WP-229                3h
+3. Create UI for Context-bar                                        https://zitics.atlassian.net/browse/CAPS-7                30m
+4. create caps Dashboard layout                                     https://zitics.atlassian.net/browse/CAPS-4                1h
+5. Create UI for List of proposal                                   https://zitics.atlassian.net/browse/CAPS-8                30m 
+6. Create UI for Add proposal                                       https://zitics.atlassian.net/browse/CAPS-9                30m
+
+
+
+
+5/12/2024 - DONE
+1. Create UI for upload document                                    https://zitics.atlassian.net/browse/CAPS-10               30m
+2. Create UI for exchange Dashboard                                 https://zitics.atlassian.net/browse/CAPS-11               1h
+3. I18n configuration in CAPS                                       https://zitics.atlassian.net/browse/CAPS-12               1h
+4. ENV configuration in CAPS                                        https://zitics.atlassian.net/browse/CAPS-13               1h
+5. Routing configuration and implementation                         https://zitics.atlassian.net/browse/CAPS-14               2h
+6. Core UI Update                                                   https://zitics.atlassian.net/browse/PAPS-1939             1h
+
+
+
+6/12/2024 DONE
+1. resolve build issue related to application path                 https://zitics.atlassian.net/browse/CAPS-27                1.5h
+2. create build for show CAPS UI                                   https://zitics.atlassian.net/browse/CAPS-28                1h 
+3. Core UI Update                                                  https://zitics.atlassian.net/browse/PAPS-1939              3h 
+
+
+
+
+
+9/12/2024 - DONE
+1. Add multiple registry in PAPS                                   Add multiple registry in PAPS                              2.5h
+2. Signzy master data Integrations for profile                     https://zitics.atlassian.net/browse/PAPS-1905              7h
+
+
+
+
+10/12/2024 - DONE
+1. Signzy master data Integrations for profile                    https://zitics.atlassian.net/browse/PAPS-1905                10h
+
+
+
+
+11/12/2024  - DONE
+upto 1 meeting for planning 
+1. Financial Utility Package installation issue                 https://zitics.atlassian.net/browse/PAPS-1926                  2h
+2. Bug verification and assign to respective members            https://zitics.atlassian.net/browse/PAPS-1927                   2h 
+
+
+
+
+12/12/2024 
+1.  Wrong Message on Delete Proposal Dialogue Box              https://zitics.atlassian.net/jira/software/c/projects/PAPS/boards/6?selectedIssue=PAPS-1270     1h
+2. Create build and Build update 12/12/2024                    https://zitics.atlassian.net/browse/PAPS-1930                                                    2h 
+3. Bug verification and assign to respective members           https://zitics.atlassian.net/browse/PAPS-1927                                                    1.5
+         
+
+
+
+13/12/2024
+1. Create build and Build update  13/12/2024                  https://zitics.atlassian.net/browse/PAPS-1931                 1.5h
+2. Verbus change in basic profile                             https://zitics.atlassian.net/browse/PAPS-1832                 15m
+3. UI render KFI                                              https://zitics.atlassian.net/browse/PAPS-1944                 1.5h
+4. UI render Fund Flow                                       https://zitics.atlassian.net/browse/PAPS-1947                 1.5h 
+
+
+
+16/12/2024  DONE
+milstone 1 & 2 meeting  1.5 hrs meeting 
+1. Santense case for external rating                        https://zitics.atlassian.net/browse/PAPS-1940                    1h
+2. Create slice for Caps dashboard                          https://zitics.atlassian.net/browse/CAPS-20                      1.5h
+3. Submission API Integration                               https://zitics.atlassian.net/browse/PAPS-1948                    1.5h 
+4. Get Prospal List PAPS Exchange API integration           https://zitics.atlassian.net/browse/PAPS-1950                    1.5h 
+5. Create Slice for xchange dashboard                       https://zitics.atlassian.net/browse/PAPS-1953                    1h
+6. create query for get proposal list in exchange           https://zitics.atlassian.net/browse/PAPS-1954                    20m
+7. Download excel file for the Financials model.            https://zitics.atlassian.net/browse/PAPS-1942                    1.5h
+8. Create build for xchange UI                              https://zitics.atlassian.net/browse/CAPS-29                      30m 
+
+
+
+
+
+17/12/2024  DONE
+
+1. Create slice for xchange                                 https://zitics.atlassian.net/browse/CAPS-19                       1.5h
+2. create query for xchange proposal list                   https://zitics.atlassian.net/browse/CAPS-21                       20m 
+3. create query for dashboard proposal list                 https://zitics.atlassian.net/browse/CAPS-22                       20m
+4. create mutation for accept proposal in xchange           https://zitics.atlassian.net/browse/CAPS-23                       20m 
+5. API integration for xchange submitted proposal           https://zitics.atlassian.net/browse/CAPS-24                       1.5h
+6. API integration for accept proposal                      https://zitics.atlassian.net/browse/CAPS-25                       1h 
+7. API integration for publish proposal CAPS dashboard      https://zitics.atlassian.net/browse/CAPS-26                       1h
+8. Create Build for API integration Application 17/12/2024  https://zitics.atlassian.net/browse/CAPS-30                       30m 
+
+
+18/12/2024
+
+
+
+
+19/12/2024
+1. Create Build and build update 19/12/2024                https://zitics.atlassian.net/browse/PAPS-1962                       1.5h 
+2. API integration for Fund flow                           https://zitics.atlassian.net/browse/PAPS-1961                       1h
+3. API integration for Cash flow                           https://zitics.atlassian.net/browse/PAPS-1960                       1.5h 
+
+
+
+
+
+20/12/2024
+1. API integration for Expense                          https://zitics.atlassian.net/browse/PAPS-1965                         1.5h
+2. API integration for Profitability                    https://zitics.atlassian.net/browse/PAPS-1966                         1.5h
+
+
+23/12/2024
+1. Page white issue resolved
+2. Create test server ready
+3. Create Dev server Ready
+4. 
+
+
+24/12/2024
+1. Meeting in conferance from 2.30 Pm 
+2. CAPS code re-arrange 
+
+
+
+26/12/2024
+
+
+27/12/2024
+on leave 
+
+
+30/12/2024
+
+1. Create Auth Build and Build update 30/12/2024     https://zitics.atlassian.net/browse/PAPS-1970                        2.5h
+2. Bug Fix build and build update 30/12/2024         https://zitics.atlassian.net/browse/PAPS-1971                        45m
+3. Business Profile - External Rating                https://zitics.atlassian.net/browse/PAPS-1612                        20m
+4. year end  Meeting 
+
+31/12/2024
+
+--------------------------------------------------------------------------------------------------
+2/1/2025
+
+
+
+
+3/1/ 2025
+
+
+
+
+
+---------------------------------------------------------------Sprint-start --------------------------------------
+6/1/2025  DONE
+ 
+1. Update Organization - Details not visible properly.     https://zitics.atlassian.net/browse/PAPS-1559              1h
+2. Business Profile - Auditor Information                  https://zitics.atlassian.net/browse/PAPS-1622              30m 
+3. Create Bug Report and check bugs status                 https://zitics.atlassian.net/browse/PAPS-2009              1h
+4. Build Update and Build Status 6/1/2025                  https://zitics.atlassian.net/browse/PAPS-2025              1h
+5. Meeting in conferance for restrospective   2.5 to 3h 
+6. CTA component restructure                               https://zitics.atlassian.net/browse/PAPS-2035              30m
+------------------------------------------------------------------------------------------------------------------
+
+7/1/2025 DONE
+
+1. Add Organization - Green Tick Mark                     https://zitics.atlassian.net/browse/PAPS-1551                1h
+2. Text box in Basic Profile section not functioning properly  https://zitics.atlassian.net/browse/PAPS-1632           30m
+3. Create Table Component for Business Profile Top Customer and Vendor https://zitics.atlassian.net/browse/PAPS-2006   30m
+4. Build Update and Build Status 7/1/2025                              https://zitics.atlassian.net/browse/PAPS-2032   1h
+5. Meetings Scrum okta developer Annexure Discussion   (2h)
+6. Create Table Component for Business Profile Top Customer and Vendor  https://zitics.atlassian.net/browse/PAPS-2006   30m
+7. Date is not getting saved in Shareholding.                           https://zitics.atlassian.net/browse/PAPS-1323   30m
+8. Heder-strip Component adding new properties                          https://zitics.atlassian.net/browse/PAPS-2044   30m
+
+--------------
+
+8/1/2025  DONE
+1. Create layout for Settings                             https://zitics.atlassian.net/browse/PAPS-2033                 2.5h 
+2. Build Update and Build Status 8/1/2025                 https://zitics.atlassian.net/browse/PAPS-2059                 1h
+3. Create UI Context-bar for Settings                     https://zitics.atlassian.net/browse/PAPS-2046                 1h
+4. Meetings Daily Scrum, Sprint task re-arrange, bug and invite user, encryption decryption (2h)
+
+
+
+-----
+9/1/2025 DONE
+1. Create Routes for User List                           https://zitics.atlassian.net/browse/PAPS-2047                   1.5h
+2. Business Profile - External Rating                    https://zitics.atlassian.net/browse/PAPS-1612                   30m
+3. Business Profile - Auditor Information                https://zitics.atlassian.net/browse/PAPS-1622                   30m
+4. Frontend Configuration for Encryption Decryption      https://zitics.atlassian.net/browse/PAPS-2063                   1h
+5. Build Update and Build Status 9/1/2925                https://zitics.atlassian.net/browse/PAPS-2080                   1.5h
+6. Meeting Daily Scrum, encryption decryption,
+   Menu-control, UI Model Design & Templatization Strategy,  
+   Date component testing and overall discussion             (2.5h)
+7.  
+
+
+-------
+10/1/2025 DONE
+1. Create Routes for User List                         https://zitics.atlassian.net/browse/PAPS-2047                      30m 
+2. Create Toggle UI component                          https://zitics.atlassian.net/browse/PAPS-2085                      30m
+3. Create mutation for create User                     https://zitics.atlassian.net/browse/PAPS-2051                      20m
+4. Create Query for user List                          https://zitics.atlassian.net/browse/PAPS-2052                      20m
+5. Create Slice for Invite User Flow                   https://zitics.atlassian.net/browse/PAPS-2050                      1.5h
+6. Meeting Daily Scrum, RatroSpective (2h)
+7. Business Profile - External Rating                  https://zitics.atlassian.net/browse/PAPS-1612                      20m
+8. Build Update and Build Status 10/1/2025             https://zitics.atlassian.net/browse/PAPS-2086                      1h
+
+------------
+
+11/1/2025 DONE 
+
+1. Create Custom Regex validation                     https://zitics.atlassian.net/browse/PAPS-2091                       2h 
+2. Build Update and Build Status 13/1/2025            https://zitics.atlassian.net/browse/PAPS-2092                       1h
+3. Daily Scrum    (1hr)
+4. Encryption for local storage Data                  https://zitics.atlassian.net/browse/PAPS-2064                       1.5h
+
+--------------
+12/1/2025
+1. Create Custom Regex validation                       https://zitics.atlassian.net/browse/PAPS-2091                        2h
+2. Build Update and build Status 14/1/2025              https://zitics.atlassian.net/browse/PAPS-2105                        1h
+3. Daily Scrum,     (1.45hr)
+
+13/1/2025
+1.
+2.
+3.
+
+14/1/2025
+1.
+2.
+3. 
+------
+15/1/ 2025 
+1. Sidebar UI changes for updated Design     https://zitics.atlassian.net/browse/PAPS-2112      3.5h
+2. Build Update and build Status 15/1/2025   https://zitics.atlassian.net/browse/PAPS-2116      1hr
+3. Daily scrum financial commit and KFI meeting (2h)
+4. Create Custom Regex validation            https://zitics.atlassian.net/browse/PAPS-2091      1hr
+
+
+16/1/2025
+1. API integration for Create User                       https://zitics.atlassian.net/browse/PAPS-2053        45m
+2. Sidebar UI changes for updated Design                 https://zitics.atlassian.net/browse/PAPS-2112        2.5h
+3. Build Update and Build Status 16/1/2025               https://zitics.atlassian.net/browse/PAPS-2128        1hr
+4. Create mutation for update User                       https://zitics.atlassian.net/browse/PAPS-2122        20m
+
+
+17/1/2025
+1. create subsidy update subsidy negative value for amount validation   https://zitics.atlassian.net/browse/PAPS-1816    30m 
+2. Business Profile - External Rating                                   https://zitics.atlassian.net/browse/PAPS-1612    30m
+3. Build update and Build status 17/1/2025                              https://zitics.atlassian.net/browse/PAPS-2138    1h
+4. Create mutation for delete Single User                               https://zitics.atlassian.net/browse/PAPS-2123    20m
+5. Create mutation for delete Single User                               https://zitics.atlassian.net/browse/PAPS-2123    20m 
+6. scrum call annexture demo  2.5h
+
+
+
+
+21/1/2025
+1. API integration for User list                                    https://zitics.atlassian.net/browse/PAPS-2054       1hr
+2. Business Profile - External Rating                               https://zitics.atlassian.net/browse/PAPS-1612       20m 
+3. Modal setting code clean up                                      https://zitics.atlassian.net/browse/PAPS-2144       2h
+4. create subsidy update subsidy negative value for amount validation https://zitics.atlassian.net/browse/PAPS-1816     20m 
+5. Build update and Build status 21/1/2025                            https://zitics.atlassian.net/browse/PAPS-2147     1hr
+6. Create mutation for deactivate single User                         https://zitics.atlassian.net/browse/PAPS-2125     20m
+
+22/1/2025
+1. API integration for update user                                   https://zitics.atlassian.net/browse/PAPS-2156      1hr
+2. API integration for deactivate single user                        https://zitics.atlassian.net/browse/PAPS-2157      1hr
+3. Build update and Build status 22/1/2025                           https://zitics.atlassian.net/browse/PAPS-2158      1.5hr
+4. Rocket chat document understanding                                https://zitics.atlassian.net/browse/PAPS-2148      1.5hr
+5. API integration for delete user                                   https://zitics.atlassian.net/browse/PAPS-2150      1hr
+6. Scrum call (45m)
+7. Swapnil annexture issue discussion 30m
+
+
+23/1/2025
+1. Row Layout component unused code remove                          https://zitics.atlassian.net/browse/PAPS-2160        2h
+2. Rocket chat document understanding                               https://zitics.atlassian.net/browse/PAPS-2148        1hr
+3. Core component React Grid Comment Style issue resolve            https://zitics.atlassian.net/browse/PAPS-2162        1.5hr
+4. Meeting Domain knowledge, Discussion for Action table tooltip error message, Daily Scrum                             (2.45hr)
+5. Build update and Build status 23/1/2025                         https://zitics.atlassian.net/browse/PAPS-2166         1hr
+
+
+24/1/2025
+1. Build update and Build status 24/1/2025                       https://zitics.atlassian.net/browse/PAPS-2171           1.5hr
+2. central store optimization                                    https://zitics.atlassian.net/browse/PAPS-2170           1.5hr
+3. Address table validation in profile section                   https://zitics.atlassian.net/browse/PAPS-2172           1hr
+
+
+27/1/2025
+1. Auth user Id changes                                         https://zitics.atlassian.net/browse/PAPS-2177            2h
+2. Organization Changes discussion with Dipti                   https://zitics.atlassian.net/browse/PAPS-2184            1.5hr
+3. Build Update and Build status 27/1/2025                      https://zitics.atlassian.net/browse/PAPS-2185            1hr 
+4. 
+5. Daily Scrum, (1.5hr)
+6. changes in User Id in application                            https://zitics.atlassian.net/browse/PAPS-2176            4hr
+
+
+28/1/2025
+1. Build update and Build status 28/1/2025                    https://zitics.atlassian.net/browse/PAPS-2193              1hr
+2. changes in User Id in application                          https://zitics.atlassian.net/browse/PAPS-2176              6hr
+3. Ratrospective, Rocket chat details disscsion (2.5hr)
+
+29/1/2025
+1. API integration for Create User                           https://zitics.atlassian.net/browse/PAPS-2053                3hr
+2. API integration for User list                             https://zitics.atlassian.net/browse/PAPS-2054                4hr
+3. Build update and Build status 29/1/2025                   https://zitics.atlassian.net/browse/PAPS-2197                1hr
+4. Create Query for user List                                https://zitics.atlassian.net/browse/PAPS-2052                20m
+5. Create mutation for create User                           https://zitics.atlassian.net/browse/PAPS-2051                DONE
+6. Create Slice for Invite User Flow                         https://zitics.atlassian.net/browse/PAPS-2050                30m 
+
+
+
+30/1/2025
+1. API integration for delete user                      https://zitics.atlassian.net/browse/PAPS-2150              2hr               
+2. Create Slice for Invite User Flow                    https://zitics.atlassian.net/browse/PAPS-2050              30m                       
+3. Create Query for user List                           https://zitics.atlassian.net/browse/PAPS-2052                 10m
+4. Build Update and Build status 30/1/2025              https://zitics.atlassian.net/browse/PAPS-2209               1.5hr
+5. API integration for User list                        https://zitics.atlassian.net/browse/PAPS-2054               1.5hr
+6. API integration for delete multiple user             https://zitics.atlassian.net/browse/PAPS-2207               4hr
+7. Create mutation for delete Single User               https://zitics.atlassian.net/browse/PAPS-2123               20m 
+8. Redirect User to Register Page with Pre-filled Data  https://zitics.atlassian.net/browse/PAPS-2218               1hr
+9. scrum call (40m)
+
+
+31/1/2025
+1. Redirect User to Register Page with Pre-filled Data  https://zitics.atlassian.net/browse/PAPS-2218                5hr
+2. scrum call   (40m)
+3. Build update and Build status 31/1/2025              https://zitics.atlassian.net/browse/PAPS-2225                1hr
+
+--------------------------------------------------------------------------------------------------------------------------------
+5/2/2025
+1. Redirect User to Login Page with Pre-filled Data     https://zitics.atlassian.net/browse/PAPS-2246                  2hr
+2. 
+
+6/2/2025
+1. Rollup configuration for Editor Js component          https://zitics.atlassian.net/browse/PAPS-2252                 1hr
+2. Changes okta Id to Auth o id                          https://zitics.atlassian.net/browse/PAPS-2253                 30m 
+
+7/2/2025
+1. Redirect User to Login Page with Pre-filled Data        https://zitics.atlassian.net/browse/PAPS-2246                2hr
+2. Changes okta Id to Auth o id                            https://zitics.atlassian.net/browse/PAPS-2253                3hr
+3. Build update and Build status 7/2/2025                  https://zitics.atlassian.net/browse/PAPS-2260                1.5hr
+
+
+10/2/2025
+1. Rollup configuration for Editor Js component         https://zitics.atlassian.net/browse/PAPS-2252                    1hr
+2. Auth Guard changes for AuthO                             https://zitics.atlassian.net/browse/PAPS-2269                2hr
+3. Retrospective meeting and Domain knowledge   (2.45hr)
+
+11/2/2025
+1. Auth Guard changes for AuthO                                          https://zitics.atlassian.net/browse/PAPS-2269    3.5hr	
+2. Build update and Build status 11/2/2025                               https://zitics.atlassian.net/browse/PAPS-2279    1hr
+3. App store discussion and scrum call (2hr) 
+
+12/2/2025
+
+1. Build update and Build status 12/2/2025                              https://zitics.atlassian.net/browse/PAPS-2290       1hr
+2. Rollup configuration for Editor Js component                         https://zitics.atlassian.net/browse/PAPS-2252       4.5hr
+3. Daily Scrum and Notification Novu discussion with devendra   (1.5hr)
+
+13/2/2025
+1. Novu Notification Frontend understanding                             https://zitics.atlassian.net/browse/PAPS-2291      1hr
+2. Build update and Build status 13/2/2025                              https://zitics.atlassian.net/browse/PAPS-2307      1.5hr
+3. Fix white screen issue in the proposal page section                  https://zitics.atlassian.net/browse/PAPS-2311      1hr
+4. Fix Login Redirect Issue in Application                              https://zitics.atlassian.net/browse/PAPS-2297      2hr
+5. Daily Scrum and Market place meeting (1.45hr)
+
+14/2/2025
+1.  Novu Notification Frontend understanding                             https://zitics.atlassian.net/browse/PAPS-2291        2.5hr  
+2.  Truncate for core component Code review and PR merge                 - https://zitics.atlassian.net/browse/PAPS-2317      2hr
+3.  
+
+
+
+17/2/2025
+1. Build update and Build status 17/2/2025                               https://zitics.atlassian.net/browse/PAPS-2330         1hr
+2. Chat Application configuration                                        https://zitics.atlassian.net/browse/ZTC-8             1.5hr
+3. Novu Notification Frontend understanding                              https://zitics.atlassian.net/browse/PAPS-2291         2.5hr
+4. Domain knowledge and scrum call (2hr)
+
+
+18/2/2025
+1. Chat Application configuration                                        https://zitics.atlassian.net/browse/ZTC-8             1hr
+2. Create Mutation for Activate single user                               - feature/PAPS-2333-create-mutation-for-activate-s   0.5hr
+3. Novu Notification Frontend understanding                              https://zitics.atlassian.net/browse/PAPS-2291         1.5hr
+
+
+20/2/2025
+1. Prepare List for Proposal Section - Percentage Calculation            -    https://zitics.atlassian.net/browse/PAPS-2341   2hr
+2. Chat Application configuration                                        -    https://zitics.atlassian.net/browse/ZTC-8       1hr
+3. API integration for Activate user                                     -    https://zitics.atlassian.net/browse/PAPS-2336   3hr
+
+
+21/2/2025
+1. API integration for Activate user                                     -    https://zitics.atlassian.net/browse/PAPS-2336    1 hr
+2. Build update and Build status 21/2/2025                               -    https://zitics.atlassian.net/browse/PAPS-2348    1.5hr
+3. Create mutation for deactivate multiple User                          -    https://zitics.atlassian.net/browse/PAPS-2126    0.5hr
+4. daily scrum  (1.5hr to 2hr)
+5. API integration for deactivate user                                   -    https://zitics.atlassian.net/browse/PAPS-2157    2hr                               
+
+
+24/2/2025
+1. API integration for deactivate user                                   -    https://zitics.atlassian.net/browse/PAPS-2157    2hr
+2. Build update and Build status 24/2/2025                               -    https://zitics.atlassian.net/browse/PAPS-2351    1.5hr
+3. Novu fronted Component implement                                      -    https://zitics.atlassian.net/browse/PAPS-2350    2.5hr
+
+
+25/2/2025
+1.  Novu fronted Component implement                                      -    https://zitics.atlassian.net/browse/PAPS-2350  
+2. Demo preparation and resolve Realtime issue                            -    https://zitics.atlassian.net/browse/PAPS-2354    6hr
+3. 
+
+27/2/2025
+1. Dev call 2hr                                                           -                                                  2.25hr   
+3.Build update and Build status 27/2/2025                                 -  https://zitics.atlassian.net/browse/PAPS-2365   1hr
+4. Create folder structure and layout for chat                            -  https://zitics.atlassian.net/browse/PAPS-2362   3hr
+5. Organization flows cross check and address issue                       - https://zitics.atlassian.net/browse/PAPS-2366    1hr
+
+
+28/2/2025
+1. Build update and Build status 28/2/2025                                -  https://zitics.atlassian.net/browse/PAPS-2375   1.5hr
+2. Organization flows cross check and address issue                       -  https://zitics.atlassian.net/browse/PAPS-2366   2.5hr
+3. Chat Application component discussion and implementation               -  https://zitics.atlassian.net/browse/ZTC-13      1.5hr
+4. Laptop restart 1 hr 
+
+----------------------------------------------------------------------------- (March)
+3/3/2025
+
+1. Organization flows cross check and address issue                       -  https://zitics.atlassian.net/browse/PAPS-2366   3.5hr
+2. Build Package for updated chat component                               -  https://zitics.atlassian.net/browse/ZTC-16      2.7hr
+3. March month plan meeting and unit testing session (1.5hr)
+4. Impact mapping for changes to UI renderer                              -  https://zitics.atlassian.net/browse/PAPS-2378   2hr
+
+
+4/3/2025
+1. 
+2. Redux structure understanding and explanation                           - https://zitics.atlassian.net/browse/PAPS-2385   1hr
+3. Build update and Build status 3/4/2025                                  - https://zitics.atlassian.net/browse/PAPS-2387   1.5hr
+4. Daily Scrum (30min)
+5. DevOps Frontend KT                                                      - https://zitics.atlassian.net/browse/PAPS-2388   2hr
+6. 
+
+
+5/3/2025
+1.  Organization flows cross check and address issue                       -  https://zitics.atlassian.net/browse/PAPS-2366  
+2.  folder structure arrangement as library standard                        -  https://zitics.atlassian.net/browse/PAPS-2394  2hr
+3.  Daily scrum and planning (2hr)
+5.  DevOps Frontend KT                                                      - https://zitics.atlassian.net/browse/PAPS-2388   1hr
+
+
+6/3/2025
+1. Build update and Build status 6/3/2025                               - https://zitics.atlassian.net/browse/PAPS-2403    1hr
+2. Redux structure understanding and explanation                        - https://zitics.atlassian.net/browse/PAPS-2385    2hr
+3. Meeting Daily scrum and planning (1hr)
+4. 
+
+7/3/2035
+1. Proposal percentage calculation show                                -    https://zitics.atlassian.net/browse/PAPS-2398      5hr
+2. Daily Scrum  1hr + apprial discussion 
+3. Redux structure understanding and explanation                       -    https://zitics.atlassian.net/browse/PAPS-2385       2hr
+4. 
+
+10/3/2025
+1. folder structure arrangement as library standard                             -  https://zitics.atlassian.net/browse/PAPS-2394 - 2hr
+2. Meeting Scrum 1 hr 
+3. Create subdomain and deploy the standalone chat application                  - https://zitics.atlassian.net/browse/PAPS-2420  - 4hr
+
+
+
+11/3/2025
+1. Create subdomain and deploy the standalone chat application                  - https://zitics.atlassian.net/browse/PAPS-2420 - 2hr
+2. Discussion regarding feature of creating teams in a proposal                - https://zitics.atlassian.net/browse/PAPS-2424  - 1hr
+3. Build update and Build status 11/3/2025                                      - https://zitics.atlassian.net/browse/PAPS-2425  - 1.5hr
+4. Open-Source Application Security Tools document understanding                - https://zitics.atlassian.net/browse/PAPS-2426  - 2hr
+
+12/3/2025
+1. daily scrum 1 hr 
+2. Show link for invite user in proposal                                         - https://zitics.atlassian.net/browse/PAPS-2430   2.5hr
+3. 
+
+
+
+13/3/2025
+1. Create UI for Invite user in proposal                                        - https://zitics.atlassian.net/browse/PAPS-2432     3hr
+2. Add Validation for Inviting Users in Proposal                                - https://zitics.atlassian.net/browse/PAPS-2433     2hr
+3. daily scrum (30min)
+4. Build update and Build status 13/3/2025                                      - https://zitics.atlassian.net/browse/PAPS-2434     1.5hr
+
+
+19/3/2025
+1. Show link for invite user in proposal                                        - https://zitics.atlassian.net/browse/PAPS-2430     1hr
+2. Daily scrum 1.15 hr  and 1 hr otp flow discussion 
+3. 
+
+20/3/2025
+1. show user list in header strip avatar dropdown                                    - https://zitics.atlassian.net/browse/PAPS-2473   - 4hr 
+2. Build update and Build status 20/3/2025                                           - https://zitics.atlassian.net/browse/PAPS-2475   - 1.5hr
+3. Chat application implementation discussion 1 hr 
+4. Daily scrun and lead meeting for nihal & swapnil (1hr)
+---------
+
+24/3/2025
+1. Create mutation for remove user from proposal team                              - https://zitics.atlassian.net/browse/PAPS-2487     - 30m 
+2. Create API function for remove user from proposal Team                          - https://zitics.atlassian.net/browse/PAPS-2490     - 1.5hr
+3. 
+
+----
+25/3/2025
+1. Build update and Build status 25/3/2025                                       - https://zitics.atlassian.net/browse/PAPS-2497   - 1.5hr
+2. metting with devendra lead metting 1.5hr 
+3. API integration for remove user from proposal Team                            - https://zitics.atlassian.net/browse/PAPS-2492   - 3hr
+4.Create slice for proposal Team                                                 - https://zitics.atlassian.net/browse/PAPS-2488   - 2hr
+
+-----
+31.3.2025
+
+1. Build update and Build status 31/3/2025                                       - https://zitics.atlassian.net/browse/PAPS-2522    1.5hr
+2. Meeting for April 4 demo (2hr)
+3. Editor JS discussion   (1hr)
+4. daily scrum   (3om)
+5. Submission API Integration                                                   - https://zitics.atlassian.net/browse/PAPS-1948     2hr
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+1/4/2025
+
+CAPS discussion with nadan sir 3 hr
+
+---
+2/4/2025  DONE
+1. scrum call 1.5 hr desgin discussion
+2. annexture meeting  1hr 
+3. submission discussion  2 hr 
+4. otp discussion 30 min 
+5  Editor js discussion 30 min 
+6. Create structure for annexture                                      - https://zitics.atlassian.net/browse/PAPS-2546        - 1.5hr
+
+----------------------------------------
+3/4/2025   (Total 14 hr) DONE
+1. Create mutation for OTP Generation                                  - https://zitics.atlassian.net/browse/PAPS-2551        - 30m 
+2. Create function for OTP Generation API                              - https://zitics.atlassian.net/browse/PAPS-2553        - 2hr
+3.  create mutation for OTP verification                               - https://zitics.atlassian.net/browse/PAPS-2555        - 30m 
+4. Create mutation for mode of Submission API                          - https://zitics.atlassian.net/browse/PAPS-2558        - 30m 
+5. Create API function mode of  submission section                     - https://zitics.atlassian.net/browse/PAPS-2559        - 2hr 
+6. Auto Save on Submission section                                     - https://zitics.atlassian.net/browse/PAPS-2560        - 4hr
+7. API Integration for Mode of Submission                              - https://zitics.atlassian.net/browse/PAPS-2531        - 4hr
+8.  Daily scrum (30 min)
+-------------------------------------------
+
+4/4/2025 - () DONE
+1. API integration for Generate OTP                                   -  https://zitics.atlassian.net/browse/PAPS-2554        - 2hr
+2. create function for OTP verification API                           -  https://zitics.atlassian.net/browse/PAPS-2556        - 2hr 
+3. OTP Verification API Integration                                   -  https://zitics.atlassian.net/browse/PAPS-2557        - 2hr
+4. CTA component implementation in mode of submission                 -  https://zitics.atlassian.net/browse/PAPS-2561        - 1hr
+5. Build update and Build status 4/4/2025                             -  https://zitics.atlassian.net/browse/PAPS-2562        - 2.5hr
+
+
+--------------------------------------------
+7/4/2025    DONE
+1. JIRA Update 
+2. daily scrum (30min)
+3. Create Slice for mode of submission section                          - https://zitics.atlassian.net/browse/PAPS-2591         - 4hr
+4. OTP implementation for submission                                    - https://zitics.atlassian.net/browse/PAPS-2542         - 3hr
+-------------------------------------------
+8/4/2025
+1. Daily scrum - 30 min 
+2. Create mutation for add user in proposal Team                       - https://zitics.atlassian.net/browse/PAPS-2486          - 30 min 
+3. Create Slice for mode of submission section                         - https://zitics.atlassian.net/browse/PAPS-2591          - 2 hr
+4. Create structure for submission section                             - https://zitics.atlassian.net/browse/PAPS-2537          - 2hr
+
+
+-------------------
+9/4/2025
+1. API integration for add user in proposal Team                      - https://zitics.atlassian.net/browse/PAPS-2491           - 2hr
+2. Create API function for DIN to Phone                               - https://zitics.atlassian.net/browse/PAPS-2574           - 2hr
+3. Create mutation for DIN no to mobile no                            - https://zitics.atlassian.net/browse/PAPS-2573           - 30m 
+4. Build update and Build status 9/4/2025                             - https://zitics.atlassian.net/browse/PAPS-2604           - 1hr
+
+
+--------------------------
+10/4/2025  DONE
+1. API integration for DIN to phone                                  - https://zitics.atlassian.net/browse/PAPS-2594            - 2hr
+2. Ditial discussion with devendra sir (1.30hr)
+3. Build update and Build status 10/4/2025                           - https://zitics.atlassian.net/browse/PAPS-2605            - 1hr
+4. Create slice for gst-return compilation                           - https://zitics.atlassian.net/browse/PAPS-2607            - 4hr
+5. API integration for gst-return compilation Get Data               - https://zitics.atlassian.net/browse/PAPS-2608            - 4hr
+
+
+-----------------------
+11/4/2025
+
+
+
+--------------------------------
+14/4/2025
+
+1. Build update and Build status 14/4/2025                          - https://zitics.atlassian.net/browse/PAPS-2712             - 1.5hr
+2. 
+
+
+
+
+-------------------------------
+15/4/2025  DONE
+
+1. Create structure for title-search-report-analysis               - https://zitics.atlassian.net/browse/PAPS-2624             - 1hr
+2. Create structure for cross-sell-information                     - https://zitics.atlassian.net/browse/PAPS-2616             - 1hr
+3. Create structure for index-of-charge                            - https://zitics.atlassian.net/browse/PAPS-2617             - 1hr
+4. Create structure for cash-credit-assessment                     - https://zitics.atlassian.net/browse/PAPS-2618             - 1hr
+5. Create structure for MPBF Assessments                           - https://zitics.atlassian.net/browse/PAPS-2619             - 1hr
+6. Build update and Build status 15/4/2025                         - https://zitics.atlassian.net/browse/PAPS-2713             - 1.5hr
+7. Daily scrum and meeting 
+-----------------------------
+
+16/4/2025
+1. Create structure for DP Assessment                             -  https://zitics.atlassian.net/browse/PAPS-2621             - 1hr
+2. Create structure for Holding Level Assessment                  -  https://zitics.atlassian.net/browse/PAPS-2622             - 1hr
+3. Build update and Build status 16/4/2025                        -  https://zitics.atlassian.net/browse/PAPS-2714             - 1.5hr
+4. GST-return compliance GST data API integration                 -  https://zitics.atlassian.net/browse/PAPS-2640             - 4hr
+-----------------------
+17/4/2025
+
+1. Daily Scrum - 30 min 
+2. NVDIA session -1.30 hr 
+3. leads Meeting - 2.5 hr
+4. Build update and Build status 17/4/2025                       - https://zitics.atlassian.net/browse/PAPS-2715                - 1.5hr
+------------------------
+
+18/4/2025
+1.  
+
+
+
+---
+21/4/2025  - DONE 
+1. CTA component implementation for GST return compliance                       - https://zitics.atlassian.net/browse/PAPS-2658      - 2hr
+2. API integration in Index of Charge.                                          - feature/PAPS-2658-cta-component-implementation-f   - 4hr
+3. Scrum call - 30 min 
+4. Build update and Build status 21/4/2025                                      - https://zitics.atlassian.net/browse/PAPS-2716      - 1hr
+
+---
+22/4/2025
+1. CTA component implementation for Index-of-charge                            - https://zitics.atlassian.net/browse/PAPS-2677       - 2hr      
+2. Create slice for Index of charge.                                           - https://zitics.atlassian.net/browse/PAPS-2702       - 3hr
+3. scrum call (30min)
+
+
+23/4/2025
+1. Auto-save-on-index-of-charge                                                - https://zitics.atlassian.net/browse/PAPS-2689       - 4hr
+2. 
+
+24/4/2025
+1. Create slice for Index of charge.                                            - https://zitics.atlassian.net/browse/PAPS-2702      - 2hr
+2. Context -menu updated design implemented                                     - https://zitics.atlassian.net/browse/PAPS-2720      - 1hr
+3. Auto-save method for cross-sell-information                                  - Auto-save method for cross-sell-information        - 1hr
+
+
+
+25/4/2025
+1. Create slice for Title search Report Analysis                              - https://zitics.atlassian.net/browse/PAPS-2711       - 2.5hr
+2. create slice for holding level assessment                                  - https://zitics.atlassian.net/browse/PAPS-2710       - 2.5hr
+3. Build update and Build status 25/4/2025                                    - https://zitics.atlassian.net/browse/PAPS-2719       - 1.5hr
+
+
+-------------------
+28/4/2025
+1. Context -menu updated design implemented                                     - https://zitics.atlassian.net/browse/PAPS-2720     - 4hr
+2. Daily scrum (30 min)
+3. Work update lead metting (annexture,editor discussion) - 1hr
+4.Build update and Build status 28/4/2025                                       - https://zitics.atlassian.net/browse/PAPS-2728     - 1.5hr
+
+
+-------------------
+29/4/2025
+
+1. Create API function for cross-sell-information Create-update-data            - https://zitics.atlassian.net/browse/PAPS-2726     - 4hr
+2. Auto-save method for cross-sell-information                                  - Auto-save method for cross-sell-information       - 2hr
+3. Scrum Call (30min)
+4. seqrite EPR (1hr)
+5. template discussion (1hr)
+6.
+
+
+30/4/2025
+1. Get Data API integration for cross-sell-information                        - https://zitics.atlassian.net/browse/PAPS-2735      - 4hr
+2. Build update and Build status 30/4/2025                                    - https://zitics.atlassian.net/browse/PAPS-2742      - 1.5hr
+
+
+
+----------------------------
+2/5/2025
+1. Build update and Build status 2/5/2025                                    - https://zitics.atlassian.net/browse/PAPS-2753        -1.5hr
+2. scrum call (30min)
+3. Lead metting (1.5hr)
+4. Financial multi-user (30min)
+5. Create slice for MPBF section                                             - https://zitics.atlassian.net/browse/PAPS-2708       - 2.5hr
+
+------------------
+5/5/2025
+
+1. Create slice for cross cell information                                   - https://zitics.atlassian.net/browse/PAPS-2706       - 2hr
+2. daily scrum (30min)
+3. leads meeting (1.30hr)
+4. fronted team realted discussion with sameer and devendra (1hr)
+5. Create slice for DP assessment                                            - https://zitics.atlassian.net/browse/PAPS-2709       - 3hr
+6. Build update and build status from 5/5/2025 to 9/5/2025                   - https://zitics.atlassian.net/browse/PAPS-2827       - 1hr
+
+----------------------
+6/5/2025
+1. daily scrum (30min)
+2. masterdata session (30min)
+3. one on one with vishal (30min)
+4. Fronted KT workshop (1 hr)
+5. Lead meet  Note discssion c&d section(2hr)
+6. API function for create-update data for MPBF section                     - https://zitics.atlassian.net/browse/PAPS-2773           - 3hr
+7. Build update and build status from 5/5/2025 to 9/5/2025                  - https://zitics.atlassian.net/browse/PAPS-2827           - 1hr
+
+
+----------------------
+7/5/2025
+1. Auto save method for MPBF section                                        - https://zitics.atlassian.net/browse/PAPS-2774           - 1hr 
+2. scrum call (30min)
+3. one on one with Atharva, Jayesh, Chetan (1.30 hr)
+4. Lead meet Not discssion E&f section()
+5. create layout for master-data                                            - https://zitics.atlassian.net/browse/PAPS-2789      - 4hr
+6. Build update and build status from 5/5/2025 to 9/5/2025                  - https://zitics.atlassian.net/browse/PAPS-2827      - 1hr
+
+---------------------
+8/5/2025
+1. Note Preview updated changes                                             - https://zitics.atlassian.net/browse/PAPS-2807      - 4hr
+2. Nore preview dicussion with devendra (1hr)
+3. scrum call
+4. Work update discussion with devndra (1hr)
+5. Build update and build status from 5/5/2025 to 9/5/2025                 - https://zitics.atlassian.net/browse/PAPS-2827       - 1hr
+
+-----------------
+9/5/2025
+1. Auto save method for MPBF section                                        -  https://zitics.atlassian.net/browse/PAPS-2774           - 3hr 
+2. Note Preview updated changes                                             -  https://zitics.atlassian.net/browse/PAPS-2807           - 1hr
+3. Build update and build status from 5/5/2025 to 9/5/2025                  -  https://zitics.atlassian.net/browse/PAPS-2827           - 1hr
+4. Get Data API integration for MPBF section                                -  https://zitics.atlassian.net/browse/PAPS-2775           - 3hr
+5. Daily scrum (30 min)
+
+
+------------------
+12/5/2025
+1. Get Data API integration for MPBF section                                - https://zitics.atlassian.net/browse/PAPS-2775            - 2hr
+2. create slice for holding level assessment                                - https://zitics.atlassian.net/browse/PAPS-2710            - 2hr
+3. Daily scrum (30min)
+4. Leads meeting discssion for n8n flow for file upload and note and all woork update overview (1.30hr)
+5. API function for create-update data for holding level Assessment         - https://zitics.atlassian.net/browse/PAPS-2833            - 4hr
+6. Build update and build status from 12/5/2025 to 16/5/2025                - https://zitics.atlassian.net/browse/PAPS-2877            - 1hr
+
+-----------------
+13/5/2025
+
+
+1. Daily scrum (30min)
+2. Leads metting discussion for demo 
+3. Proposal filling and testing with Kaustubh sir                           - https://zitics.atlassian.net/browse/PAPS-2861            - 5hr
+4. After delete facility page refresh issue for updated facility list       - https://zitics.atlassian.net/browse/PAPS-2847            -1.5hr
+5. Build update and build status from 12/5/2025 to 16/5/2025                - https://zitics.atlassian.net/browse/PAPS-2877            - 1hr
+
+-------------
+14/5/2025
+
+1. Create Structure for user-profile-management                             - https://zitics.atlassian.net/browse/PAPS-2855            - 4hr
+2. Auto Save method for holding-level-assessment                            - https://zitics.atlassian.net/browse/PAPS-2836            - 3hr
+3. Build update and build status from 12/5/2025 to 16/5/2025                - https://zitics.atlassian.net/browse/PAPS-2877            - 1hr
+
+----------------------------
+15/5/2025
+1. Auto Save method for holding-level-assessment                            - https://zitics.atlassian.net/browse/PAPS-2836             - 5hr   
+2. scrum call (30min)
+Build update and build status from 12/5/2025 to 16/5/2025                - https://zitics.atlassian.net/browse/PAPS-2877                - 1hr
+
+--------------------------------
+16/5/2025
+1. Auto Save method for holding-level-assessment                            - https://zitics.atlassian.net/browse/PAPS-2836             - 5hr
+2. Build update and build status from 12/5/2025 to 16/5/2025                - https://zitics.atlassian.net/browse/PAPS-2877             - 2hr
+
+
+------------------------------------
+19/5/2025
+
+1. Create API function create-update data for index-of-charge               - https://zitics.atlassian.net/browse/PAPS-2879              - 4h 
+2. Scrum Call - 30 min 
+3. seqrite installation and configration 1 hr 
+4. Auto-save-on-index-of-charge                                             - https://zitics.atlassian.net/browse/PAPS-2689              - 2hr
+5. Build updates and build status 19/5/2025 to 13/5/2025                           - https://zitics.atlassian.net/browse/PAPS-2928       - 1hr
+
+--------------------------------
+20/5/2025
+1. Index of charge - update data api integration.                           - https://zitics.atlassian.net/browse/PAPS-2690              - 5hr
+2. Scrum Call- 30min 
+3. Build updates and build status 19/5/2025 to 13/5/2025                           - https://zitics.atlassian.net/browse/PAPS-2928       - 1hr
+
+-------------------------------
+21/5/2025
+1. Annexure discussion with devendra kaustub  - (2.5h)
+2. Editor Js meeting with devendra kaustub    - (1.5h)
+3. API integration in Index of Charge.                                     - https://zitics.atlassian.net/browse/PAPS-2641               - 2hr
+4. Build updates and build status 19/5/2025 to 13/5/2025                           - https://zitics.atlassian.net/browse/PAPS-2928       - 1hr
+
+
+-------------------------------
+22/5/2025
+
+1. Get Data API integration for MPBF section                                       - https://zitics.atlassian.net/browse/PAPS-2775              - 1hr
+2. cross-sell-information master data API integration                              - https://zitics.atlassian.net/browse/PAPS-2906              - 5hr
+3. Build updates and build status 19/5/2025 to 13/5/2025                           - https://zitics.atlassian.net/browse/PAPS-2928              - 1hr
+
+----------
+23/5/2023
+1. Build updates and build status 19/5/2025 to 13/5/2025                           - https://zitics.atlassian.net/browse/PAPS-2928              - 1hr
+2. cross-sell-information master data API integration                              - https://zitics.atlassian.net/browse/PAPS-2906              - 6hr
+3. 
+
+
+------------
+26/5/2025
+1. Get Data API integration for MPBF section                                       - https://zitics.atlassian.net/browse/PAPS-2775              - 1hr
+2. Scrum call 30-min 
+3. Leads meeting - discssion for coast estimation and tie estimation - 2.30hr
+4. Leads meeting for 6.30 Demo -  4hr
+5. 
+
+
+---------------------
+27/5/2025 - Work from Home
+1. annexture section routing                                                       - https://zitics.atlassian.net/browse/PAPS-2919              -30min
+2. cross-sell-information master data API integration                              - https://zitics.atlassian.net/browse/PAPS-2906              - 4hr
+3. Scrum call - 30min 
+4. And Team Call And any other meeting chat discussion meeting - 2hr
+
+------------------------------
+28/5/2025
+1. cross-sell-information CTA component implementation                             - https://zitics.atlassian.net/browse/PAPS-2884               - 1.5hr             
+2. index-of-charge master data API integration                                     - https://zitics.atlassian.net/browse/PAPS-2942 
+3. cross-sell-information master data API integration                              - https://zitics.atlassian.net/browse/PAPS-2906               - 2hr
+4. Changes related to prepare the Test environment                                 - https://zitics.atlassian.net/browse/PAPS-2945               - 3hr
+5. Prepare the TEST environment for the PAPS                                       - https://zitics.atlassian.net/browse/PAPS-2971               - 3.5hr
+
+
+-------------------------
+29/5/2025
+
+1. Create UI for upload Note And overlay                                          - https://zitics.atlassian.net/browse/PAPS-2958                 - 4hr
+2. API integration for upload CMA                                                 - https://zitics.atlassian.net/browse/PAPS-2960                 - 8hr
+3. API integration for Upload Note                                                - https://zitics.atlassian.net/browse/PAPS-2961                 - 4hr
+4.
+5. 
+
+---------------------
+30/5/2025
+
+1.  Editor component document upload Dev URL update                                - https://zitics.atlassian.net/browse/CORE-490                  - 3.5hr
+
+
+
+-----------------------------------------------------------------
+JUNE MONTH
+
+2/6/2025
+
+1. annexture section routing                                                      - https://zitics.atlassian.net/browse/PAPS-2919                 - 1hr
+2. index-of-charge master data API integration                                    - https://zitics.atlassian.net/browse/PAPS-2942                 - 3hr
+3. Create query for default setting for proposal data                             - https://zitics.atlassian.net/browse/PAPS-3002                 - 30min
+4. create folder structure for master-data                                        - https://zitics.atlassian.net/browse/PAPS-2787                 - 1.50hr
+-----------------------------
+3/6/2025
+
+1. index-of-charge master data API integration                                    - https://zitics.atlassian.net/browse/PAPS-2942         
+2. Issue : Handle Realtime CRUD operations in the management                      - https://zitics.atlassian.net/browse/PAPS-2986                  - 2.5hr
+3. Get Data API integration for MPBF section                                      - Get Data API integration for MPBF section                      - 4hr
+4. Scrum call -30 min
+5. Evening meeting with devendra regaring prasana ir demo  1.5hr
+6. Routing setup for master-data                                                  - https://zitics.atlassian.net/browse/PAPS-2788                   - 30m
+
+--------------------
+4/6/2025
+1. Get Data API integration for MPBF section                                      - https://zitics.atlassian.net/browse/PAPS-2775                   - 1hr
+2. Proposal Settings - API implementation                                         - https://zitics.atlassian.net/browse/PAPS-2982
+3. update slice for proposal default setting data                                 - https://zitics.atlassian.net/browse/PAPS-3004                   - 3.5hr
+4. Encryption data for login credentials                                          - https://zitics.atlassian.net/browse/PAPS-3012                   - 3.5hr
+5. Daily Scrum - 30 min
+------------------------
+5/6/2025
+1. Implement default setting data to create facility                             - https://zitics.atlassian.net/browse/PAPS-3005                    - 4hr
+2. Discussion regarding the enhancement to the Proposal list table               - https://zitics.atlassian.net/browse/PAPS-3005                    - 45m
+3. Daily scrum - 30min
+4. Implement default setting data for exposure section                           - https://zitics.atlassian.net/browse/PAPS-3023                    - 2hr
+---------------------------------------------
+
+6/6/2025
+1. Implement default setting data for guarantors section                         - https://zitics.atlassian.net/browse/PAPS-3030                    - 3.5hr
+2. Daily Scrum  - 30 min 
+3. Implement default setting data for exposure section                           - https://zitics.atlassian.net/browse/PAPS-3023                     - 1.5hr
+4. ISo Discussion with devendra - 1.30 hr 
+
+
+--------------------------------------------------------
+9/6/2025
+
+1. API implementation for the delete proposal                                    - https://zitics.atlassian.net/browse/PAPS-3041                     - 2hr 
+2. Implement default setting data for cross-sell-information annexure            - https://zitics.atlassian.net/browse/PAPS-3046                     - 3.5hr
+3. Daily scrum - 30 min
+4. 
+------------------------------------------------------
+10/6/2025
+
+1. API implementation for the delete proposal                                    - https://zitics.atlassian.net/browse/PAPS-3041                     - 4.5hr 
+2. UI Modification - Proposal list table modification                            - https://zitics.atlassian.net/browse/PAPS-3038                     - 2hr
+3. Daily Scrum -30min 
+----------------------------
+11/6/2025
+
+1. Daily scrum -30min
+2. Leads meeting and work update meeting -1.30 hr 
+3. Master data meeting - 1.30 hr 
+4. update proposal section unit currency disabled                                - https://zitics.atlassian.net/browse/PAPS-3068                      - 2hr
+5. ISO traning - 1.30 hr
+-----------------------
+12/6/2025
+1. Daily scrum - 30 min
+2. Leads meeting - dicussion for OCR file upload to frontend mapping process discussion - 1.30 hr
+3. update proposal section unit currency disabled                                - https://zitics.atlassian.net/browse/PAPS-3068                      - 2hr 
+4. Proposal Settings - API implementation                                        - https://zitics.atlassian.net/browse/PAPS-2982                      - 2hr
+5. 
+
+------------------
+13/6/2025
+1. Daily Scrum - 30 min
+2. Leads meeting - dicussion for OCR file upload to frontend mapping state digram presentation - 1.30 hr
+3. Proposal Settings - API implementation                                        - https://zitics.atlassian.net/browse/PAPS-2982                      - 3hr 
+4. 
+
+----------------------
+16/6/2025
+1. Daily Scrum -30 min 
+2. Build update and build status 16/6/2025 to 20/6/2025          - https://zitics.atlassian.net/browse/PAPS-3135                                      - 1hr  
+3. create-proposal-amount-format implementation                  - https://zitics.atlassian.net/browse/PAPS-3081                                      - 2hr
+4. Exposure Section add-and-update-facility Amount Mapping       - https://zitics.atlassian.net/browse/PAPS-3082                                      - 2hr
+5. Amount format for input component                             - https://zitics.atlassian.net/browse/CORE-494                                       - 1hr
+
+-----------------------------
+17/6/2025
+1. Daily Scrum - 30min
+2. Build update and build status 16/6/2025 to 20/6/2025          - https://zitics.atlassian.net/browse/PAPS-3135                                      - 1hr
+3. Exposure-add-and-update-facility-sublimit                     - https://zitics.atlassian.net/browse/PAPS-3083                                      - 1.5hr
+4. security-add-and-update-security-details for Amount Format    - https://zitics.atlassian.net/browse/PAPS-3096                                      - 1.5hr
+5. security-add-and-update-guarantee-details Amount Format       - https://zitics.atlassian.net/browse/PAPS-3097                                      - 1.5hr
+
+--------------------------------
+18/6/2025
+1. Daily Scrum  - 30 min
+2. Build update and build status 16/6/2025 to 20/6/2025          - https://zitics.atlassian.net/browse/PAPS-3135                                      - 1hr
+3. Proposal settings unit currency issue in update proposal section   - https://zitics.atlassian.net/browse/PAPS-3122                                 - 3hr
+4. Amount format for input component                             - https://zitics.atlassian.net/browse/CORE-494                                       - 1hr
+5. 
+
+-------------------------------
+19/6/2025
+1. Daily Scrum  - 30 min 
+2. Build update and build status 16/6/2025 to 20/6/2025          - https://zitics.atlassian.net/browse/PAPS-3135                                      - 1hr
+3. MPBF-Assessment updated API implementation                    - https://zitics.atlassian.net/browse/PAPS-3128                                      - 5hr
+4. 
+
+-----------------------------
+20/6/2025
+1. Daily Scrum - 30 min
+2. Build update and build status 16/6/2025 to 20/6/2025          - https://zitics.atlassian.net/browse/PAPS-3135                                      - 2hr
+3. ISO traning and policy explain by devendra Sir                -  2hr 
+4. Images path changes for env                                   - https://zitics.atlassian.net/browse/PAPS-3136                                      - 2hr
+5. Local Storage Data Encrypted                                  - https://zitics.atlassian.net/browse/AUTH-158                                       - 2hr 
+
+
+-----------------------------
+23/6/2025
+1. Local Storage Data Encrypted                                   - https://zitics.atlassian.net/browse/AUTH-158                                      - 2hr
+2. Build update And Status 23/6/2025                              - https://zitics.atlassian.net/browse/PAPS-3141                                     - 1hr
+3. Two factor authentication                                      - 30 min 
+4. Leads meeting for encryption and walt secret -                 - 1.30 hr            
+5. Images path changes for env                                    - https://zitics.atlassian.net/browse/PAPS-3136                                     - 3hr
+6. 
+
+------------------------------
+24/6/2025
+
+1. Encryption for local storage Data                              - https://zitics.atlassian.net/browse/PAPS-2064                                     - 4hr                             
+2. Daily Scrum                                  - 30 min      
+3. Leads meeting for ISO policy and work update - 3.30 hr 
+----------------------------
+25/6/2025 
+
+1. Encryption for local storage Data                              - https://zitics.atlassian.net/browse/PAPS-2064                                     - 7hr 
+2. Unit testing for local storage Data Encryption                 - Unit testing for local storage Data Encryption                                    - 2hr 
+3. 
+
+----------------------------------
+26/6/2025
+
+1. Encrypt the critical organization data while sending through the organization          - https://zitics.atlassian.net/browse/PAPS-3151             - 1hr
+2. ISO Certification Audit
+3. update Test server for En-de                                                           - https://zitics.atlassian.net/browse/AUTH-160              -3hr
+
+
+
+-----------------------------------
+27/6/2025
+
+1. https://zitics.atlassian.net/browse/AUTH-160                                           - https://zitics.atlassian.net/browse/AUTH-159               - 1hr
+
+
+-----------------------------------
+30/6/2025
+1. cross-cell information Currency-Unit implementation                                    - https://zitics.atlassian.net/browse/PAPS-3159              -1 hr
+2. Index-of-charge Currency-Unit implementation                                           - https://zitics.atlassian.net/browse/PAPS-3161              - 1hr
+3. GST-return-compilation Currency-Unit implementation                                    - https://zitics.atlassian.net/browse/PAPS-3163              - 1 hr
+4. 
+
+------------------------------------
+1/7/2025
+
+
+
+
+
+------------------
+2/7/2025
+
+1. Build update and status 2/7/2025                                                       - https://zitics.atlassian.net/browse/PAPS-3173             - 1hr
+2. Leads meeting and discussion - 1hr 
+3. CI/CD pipeline for Zitics-core-ui                                                      - https://zitics.atlassian.net/browse/CORE-495              - 6hr
+
+-----------------
+3/7/2025
+
+1. Sandbox process flow Discussion leads meeting 
+2. Build update and status 3/7/2025                                                       - https://zitics.atlassian.net/browse/PAPS-3175             - 1hr 
+3. CI/CD pipeline for zitics-crypto                                                       - https://zitics.atlassian.net/browse/CORE-496              - 4hr
+-----------------
+4/7/2025
+
+
+
+5/7/2025
+
+
+
+------------------------
+8/7/2025
+
+1. Build update and status 8/7/2025                                                        - https://zitics.atlassian.net/browse/PAPS-3188            - 1hr
+2. Leads review meeting- discssion for demo fail and Impact analysis - 2.30 hrs
+3. Convert CRA to Vite Paps application                                                    - https://zitics.atlassian.net/browse/PAPS-3178            - 2hr
+4. 
+
+
+----------------------------
+9/7/2025
+1. Convert CRA to Vite Paps application                                                   - https://zitics.atlassian.net/browse/PAPS-3178             - 2hr
+2. Build update and status 9/7/2025                                                       - https://zitics.atlassian.net/browse/PAPS-3198             - 1hr
+3. 
+1. Leads meeting for Pending issue  -1 hr 
+2. prepare pending issue list 
+3. create document for migration CRA to Vite 
+4. Convert CRA to Vite 
+5. Leads discussion for pending issue 
+6. sync fusion 7 component over view 
+7. 
+
+
+
+------------------------
+10/7/2025
+
+1. Build update and status 10/7/2025                                                     - https://zitics.atlassian.net/browse/PAPS-3199              - 1hr
+2. Convert CRA to Vite Paps application                                                  - https://zitics.atlassian.net/browse/PAPS-3178              - 4.5hr
+3. 
+-------------
+11/7/2025
+
+1. Convert CRA to Vite Paps application                                                  - https://zitics.atlassian.net/browse/PAPS-3178              - 4hr 
+2. Build update and status 11/7/2025                                                     - https://zitics.atlassian.net/browse/PAPS-3203              - 1hr
+3. Create Test Environment for PAPS Application                                          - https://zitics.atlassian.net/browse/PAPS-3204              - 1hr
+
+--------------
+14/7/2025
+
+1. Setup in core for syncfusion component                                                - https://zitics.atlassian.net/browse/CORE-499               - 2hr
+2. SyncFusion Configuration and License key implementation                               - https://zitics.atlassian.net/browse/CORE-500               - 2.5hr
+3. Build update and status 14/7/25                                                       - https://zitics.atlassian.net/browse/PAPS-3212              - 1.5hr 
+
+--------------
+15/7/2025
+1. Build Issue for Create Build new core component                                       - https://zitics.atlassian.net/browse/CORE-507               - 2.5hr
+2. Build update and Issue in PAPS build 15/7/25                                          - https://zitics.atlassian.net/browse/PAPS-3214              - 4hr
+3. 
+
+----------------
+16/7/2025
+1. Demo Day 
+
+---------------
+17/7/2025
+1. Leades Meeeting - Meeting regaring pending issue.  3hr 
+2. 
+
+-----------------
+18/7/2025
+1. 
+
+
+-------------
+21/7/2025
+1. Build update and status 21/7/2025                                                    - https://zitics.atlassian.net/browse/PAPS-3224                - 1hr
+2. Scrum Call - 30 min
+3. Leadsmetting for DTS  - 1 hr 
+4. 
+--------------------
+22/7/2025
+1. Daily scrum
+2. leeds meeting  - 1.30hr
+3. Build update and status 22/7/2025 to 24/7/2025                                     - https://zitics.atlassian.net/browse/PAPS-3239                - 1hr
+----------------
+23/7/2025
+1. Leeds meeting for Data-field and RBAC-UBAC
+2. Auth Migration for CRA-to-Vite.
+3.  Build update and status 22/7/2025 to 24/7/2025                                     - https://zitics.atlassian.net/browse/PAPS-3239                - 1hr
+
+-------------------
+24/7/025
+
+1. Build update and status 22/7/2025 to 24/7/2025                                     - https://zitics.atlassian.net/browse/PAPS-3239                - 1hr    
+2. Dp-assessment Currency-Unit implementation                                         - https://zitics.atlassian.net/browse/PAPS-3167                - 1hr
+3. Title-search-report-analysis Currency-Unit implementation                          - https://zitics.atlassian.net/browse/PAPS-3166                - 1hr
+4. Holding-level-assessments Currency-Unit implementation                             - https://zitics.atlassian.net/browse/PAPS-3165                - 1hr
+5. MPBF-assessments Currency-Unit implementation                                      - https://zitics.atlassian.net/browse/PAPS-3164                - 1hr
+6. 
+
+------------------------
+25/7/2025
+1. Build update and status 25/7/2025 & 28/7/2025                                      - https://zitics.atlassian.net/browse/PAPS-3249                - 2.5hr
+
+
+
+---------------
+28/7/2025
+1. Leads meeting  1hr 
+2. Build update and status 25/7/2025 & 28/7/2025                                      - https://zitics.atlassian.net/browse/PAPS-3249                - 3hr
+3. 
+
+
+
+-----------------
+29/7/2025
+1. Create UI for Invitation Accept                                                    - https://zitics.atlassian.net/browse/PAPS-3250                - 2.5hr
+2. Create API function for Invitation Accept                                          - https://zitics.atlassian.net/browse/PAPS-3251                - 1.5hr
+3. API Integration for Invitation Accept                                              - https://zitics.atlassian.net/browse/PAPS-3252                - 2hr
+4. Build update and Status 29/7/2025                                                  - https://zitics.atlassian.net/browse/PAPS-3257                - 1.5hr
+
+
+------
+30/7/2025
+1. Create UI for Invitation Accept                                                   - https://zitics.atlassian.net/browse/PAPS-3250                 - 2hr
+2. Functionality End-to-End testing for organization Invitation-accepts              - https://zitics.atlassian.net/browse/PAPS-3268                 - 1.5hr
+3. Build update and status 30/7/2025                                                 - https://zitics.atlassian.net/browse/PAPS-3267                 - 1.5hr
+
+-----------------
+31/7/2025
+1. Mask Input Syncfusion core component creation                                     - https://zitics.atlassian.net/browse/CORE-518                  - 3hr 
+2. Leads meeting sammer & Devendra syncfusion word-processor - 2hr 
+3. Build update and status 31/7/2025                                                 - https://zitics.atlassian.net/browse/PAPS-3276                 - 1hr
+4. 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+1/8/2025
+1. Create Confirmation modal for Delete Activity                                     - https://zitics.atlassian.net/browse/CORE-520                  - 2hr
+2. 
+
+
+
+
+-------------------
+4/8/2025
+1. Create Confirmation modal for Delete Activity                                    - https://zitics.atlassian.net/browse/CORE-520                   - 2hr 
+
+
+
+
+-------------
+5/8/2025
+1. Create Confirmation modal for Delete Activity                                   - https://zitics.atlassian.net/browse/CORE-520                    - 2hr 
+
+
+
+-----------------
+6/8/2025
+
+
+7/8/2025
+
+
+8/8/2025
+
+
+----------------
+11/8/2025
+
+1. After Register in dev server Geeting screen white                            - https://zitics.atlassian.net/browse/PAPS-3296                      -  4hr
+2. 
+
+
+13/8/2025 
+1. Changes in  headers for API tracking                                         - https://zitics.atlassian.net/browse/PAPS-3309                     - 5hr 
+
+
+------------------------
+
+28/8/2025
+1. 
+2. 
+3. 
+
+---------------
+
+
+
+-----------------------------------------------------------------------------------
+1/9/2025
+
+1. Issues : Node Version Reconfiguration & Dependencies                         - https://zitics.atlassian.net/browse/PAPS-3339                      - 2.5hr 
+2. Build update and status 1/9/2025                                             - https://zitics.atlassian.net/browse/PAPS-3340                      - 2hr
+3. Core package issue for Build size                                            - https://zitics.atlassian.net/browse/CORE-531                       - 1hr 
+
+------------
+2/9/2025
+1. Build update and status 2/9/2025                                             - https://zitics.atlassian.net/browse/PAPS-3349                      - 1hr 
+2. 
+
+
+
+---------
+3/9/2025
+1. Clean Installation and Make Build Size More Compressive                   - https://zitics.atlassian.net/browse/CORE-537                       - 2.5hr
+2. 
+
+
+4/9/2025
+1. Clean Installation and Make Build Size More Compressive                   - https://zitics.atlassian.net/browse/CORE-537                       - 2.5hr
+
+
+5/9/2025 
+1. 
+
+
+
+
+8/9/2025
+
+1. Core package issue for Build size                                        - https://zitics.atlassian.net/browse/CORE-531                         - 1.5hr 
+2. Build update and status 8/9/2025                                         - https://zitics.atlassian.net/browse/PAPS-3352                        - 2.5hr 
+
+
+9/9/2025 
+1. Core package issue for Build size                                        - https://zitics.atlassian.net/browse/CORE-531                         - 1.5hr 
+2. Build update and status 9/9/2025                                         - https://zitics.atlassian.net/browse/PAPS-3354                        - 2.5hr 
+3. Implement Uniform API Response Handler Across All APIs                   - https://zitics.atlassian.net/browse/PAPS-3240                        - 1.5hr 
+
+---
+15/9/2025
+     1. code merge for syncfusion for financial module.
+	 2. catch up meeting 
+	 3. understanding thmeme for core component and PAPS Application.
+	 4. understanding how theme-provider works.
+	 
+16/9/2025 
+
+1. Zitics-Core-provider                                                   - https://zitics.atlassian.net/browse/CORE-542                          - 1hr 
+2. Syncfusion style issue                                                 - https://zitics.atlassian.net/browse/CORE-543                          - 1.75h
+3. Core package issue for Build size                                      - https://zitics.atlassian.net/browse/CORE-531                          - 1.5hr 
+4. Build update and status 17/9/2025                                      - https://zitics.atlassian.net/browse/PAPS-3359                         - 1 hr 
+5. 
+
+
+
+17/9/2025 
+
+1. Zitics-Core-provider                                                  - https://zitics.atlassian.net/browse/CORE-542
+2. 
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+ZITICS OPAL PLATFORM 

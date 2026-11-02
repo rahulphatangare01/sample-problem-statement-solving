@@ -1,0 +1,9 @@
+Installation for production 
+
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init
+ after this create new file tialwind.config.js 
+ 
+ in that file 
+  content: ['*']

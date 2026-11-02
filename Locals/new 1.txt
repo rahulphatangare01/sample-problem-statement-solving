@@ -1,0 +1,7 @@
+Font Family suggestion
+    1. IBM Plex
+	2. Nexa
+	3. IBM Plex Sans
+	4. Roboto_ mono
+	5. PT_serif
+	6. OPen_sans

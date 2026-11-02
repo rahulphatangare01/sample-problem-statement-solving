@@ -1,0 +1,359 @@
+
+1. Scalable Lead Processing Architecture
+    ANS - Design clear layers for API, validation, persistence, queue-based background processing, cache usage,
+	and frontend consumption so that each stage can evolve or scale independently.
+	
+	Explantion - I selected Option 2 because Current Lead creation flow, typically evolve over time with additional business rules,
+	integration, notification, approval workflows and reporting requirements, we can create layered and asynchronous architecture allows 
+	these capabilities to be added without tightly coupling all processing into a single API flow.
+     Example - In Lead creation from borrower and lender side the API may be immediately validate and store the lead in MYSQL. but we can do publish
+     enrichment and notification tasks to RabbitMQ for background processing. this evaluation email, notification or approval checks to execute independently.
+	 
+	
+	
+2.  Designing for Failure and Recovery 
+    ANS - Design for retries, idempotency, clear processing states, observability, and controlled recovery from the beginning so the system can degrade safely.
+	Explantion -  I selected Option 3 because when we involve multiple components like APIs, MYSQL RabbitMQ and external services are involved then failures in distributed workflows inevitable.
+    Example - In Current Lead Creation flow lead processing workflow, a lead is successfully created and store in MYSQL. but RabbitMQ publishing could not temporary fail due to network issue or broke
+    timeout. without retry mechanisms and processing-state tracking,
+     the lead is missing So this issue we have notice in Internal Demo.
+	 
+	 
+3.  Debugging a Production Performance Regression
+    ANS - Use application metrics, logs, APM traces, query timings, queue backlog data, and dependency latency to identify the true source of the regression before changing anything major.
+	Explantion - I selected Option 3 because I have seen scenarios where application servers appeared healthy, but request latency increased during peack traffic because a few MYSQL queries
+	were performing full table scans due to missing indexes.
+    Example - In Internal Demo when I am filling proposal in OPAL Platform that time, I have notice same issue In Financial section where I 
+	am filling spreadsheet but data save and shown in spread sheet is comparatively slow so I have check debug and resolved issue now Its working properly
+	
+	
+4.  RabbitMQ Consumer Reliability
+    ANS - Design consumers with acknowledgements, retries, dead-letter handling, observability, and clear separation between transient and permanent failures.
+	Explantion -  I selected Option 2 because in real world RabbitMQ workflows, message delivery is at least once, meaning duplicate delivery and transient failure are expected behavior. 
+in Lead-processing flow, a lead created by lender or borrower may successfully fill data and store in MYSQL but application crash before sending the acknowledgement back to Rabbit MQ. in that case, Rabbit Mq redelivers the same message. without proper acknowledge handling, 
+and may be system can create duplicate Entry of lead 
+
+
+
+5. End-to-End Production Ownership 
+   ANS - Take ownership of triage, isolate the issue, communicate status, implement or coordinate the fix, and ensure follow-through after immediate recovery.
+   Explantion -  I selected Option 2 because in production ownership responsibility and business impact, not only on who originally write the code. 
+   Example - If production issue causes lead status or dashboard status to stop updating correctly, support terms immediately start receiving client
+ escalation while product terms need accurate impact assessment.We have did this before demo when application brake due to another team member But
+   I have taken ownership and resolve issue on priority basis
+   
+   
+ ------------------------------------------------------------------------------------------
+ 
+6. Validating AI-Generated Code Before Use
+
+
+ANS - Review the logic, run targeted tests, check architectural fit, validate edge cases, and refactor as needed before adopting any of it.
+Explantion -  I selected Option 3 because AI-generated code can accelerate development, but it still requires engineering validation before being trusted in production systems.
+Example - AI-generated NodeJS API may be working but still contain issues such as missing validation Input, SQL injections risks, memory leak, unhandled async failure, inefficient DB queries, improper error handling.
+
+
+
+7. Managing AI Dependency Versus Engineering Ownership
+ANS - This is risky because engineering ownership requires understanding, debugging ability, and independent judgment beyond generated output.
+Explantion - I selected Option 3 because AI is a productivity tool, not a replacement for engineering judgment and system understanding.
+Example-  A developer may use AI to quickly generate APIs, database queries, or architecture patterns, but production issues rarely fail in  scenarios. Real-world debugging often requires understanding: async execution flow, database behavior, queue processing, scaling bottlenecks, retry side effects, memory usage
+
+
+8.  Detecting Incorrect or Misaligned AI Output
+
+ANS - Evaluate the output against explicit requirements, constraints, failure modes, and your existing system patterns before deciding what to keep or discard.
+Explantion - I selected Option 3 because AI-generated architectural recommendations can be highly confident and technically correct but still being misaligned with actual business or system requirements.
+Example - AI may suggest introducing microservices, event sourcing, or multiple abstraction layers for an application that currently has a small team, moderate traffic, and simple operational needs. While the design may appear sophisticated, it can increase deployment complexity, operational overhead, debugging difficulty, and development time without solving a real problem.
+
+
+9.  AI Risks in Production Development
+ANS - Accept that AI can accelerate both good and bad engineering, and that responsibility still sits with the developer who validated, adopted, or ignored gaps in the output.
+
+Explantion -  I selected Option 3 because AI is a development accelerator, not a human or developer engineer. The quality and safety of production systems still depend on the developer’s validation, architectural judgment, testing, and operational awareness.
+Example - AI-generated code may correctly implement a NodeJS API for basic requests but still miss critical production concerns such as  input validation, retry handling, Middleware uses,  async race conditions , connection pool limits, timeout handling,
+
+
+10.  Measuring Real Productivity Gains from AI
+ANS - Compare before-versus-after outcomes across speed, quality, complexity handled, debugging effort, and rework avoided.
+Explantion -  I selected Option 3 because real engineering productivity is measured by business and operational outcomes, not just the amount of code generated.
+Example - AI tools may help developers generate APIs, test cases, boilerplate code, documentation, or debugging suggestions faster, but increased code volume alone does not guarantee better engineering results. In some cases, teams may initially ship features faster but later lose time due to debugging, architectural inconsistencies, or production rework caused by poorly validated AI-generated code.
+
+
+----------------------------------------------------------------
+11. Ownership Under Deadline Pressure
+ANS - Communicate the risk early, propose options, increase effort where sensible, and keep the focus on solution and transparency rather than excuses.
+Explantion -  I selected Option 2 because ownership under deadline pressure is measured by proactive communication, solution-oriented thinking, and maintaining stakeholder trust — not by avoiding difficult conversations or shifting blame.
+Example - in a client-facing feature rollout, delays may occur due to external API dependencies, QA bottlenecks, infrastructure issues, or changing requirements. Same issue I have face while working with annexture section, but I have completed but timeline cross but it's completed.
+
+
+12.  Handling Ambiguous Requirements
+ANS -  Break the requirement into clear questions, separate knowns from unknowns, define documented assumptions, and make progress on the parts that can be responsibly advanced.
+Explantion - I selected Option 3 because real-world software projects frequently involve partially defined requirements and require balancing progress with risk management instead of waiting indefinitely or making undocumented assumptions.
+Example - While working with PAPS Application I got opportunity work with annexture section, so In annexture section there is requirement is change frequently so I have documented requirement and discuss with respective sir and finally this annexture of 8 we covered 5 to 6 annextures with working. 
+
+
+13.  Communicating Risks Early
+ANS - Surface the risk early with context, likelihood, and possible mitigation so the team can respond while options still exist.
+Explantion - I selected Option 2 because proactive risk communication gives engineering, product, and leadership teams enough time to evaluate alternatives and reduce impact before a problem becomes critical.
+Example - during implementation, we Identify that a  third-party API has unstable response times, a database query may not scale under expected response, or third party API is not working it's happen in every time before we go to demo it's one of the failures of less communication or not tracking third party status. 
+
+
+14.  Prioritizing Under Competing Demands
+ANS - Prioritize based on business impact, urgency, dependency chains, and reversibility rather than personal comfort or noise level. 
+Explantion - I selected Option 2 because effective prioritization in engineering should be driven by operational and business impact rather than chronology, convenience pressure alone
+example - When we working on Note mapping that time we need to prioritize the task and feature as per Demand so for this we did under competing Demands. 
+
+
+15. Handling Failure and Accountability
+ANS - Own the triage and recovery process appropriately, help determine the root cause, and focus on restoring system health before arguing about blame.
+Explantion -  I selected Option 2 because As Senior Developer or Team Lead ownership is demonstrated by prioritizing system recovery, user impact reduction, and transparent collaboration over defensive blame management.
+Example - When Editor JS is not working and Note save and binding feature is brake that time I am not responsible person, but I stay in office in night and make this feature working so have take accountability and accept failure.
+
+
+-----------------------------------------------------------------------------------
+16.  Learning Mindset Under Change
+ANS - Learn proactively using documentation, AI, experiments, and focused questions so you can become productive without excessive dependence.
+Explantion - I selected Option 2 because modern engineering environments evolve continuously, and waiting for perfect training or complete team expertise can slow delivery and reduce adaptability.
+Example -  When a new technology such as Redis caching, RabbitMQ, EditorJs, syncfusion component, RTk query and such fronted framework become necessary for project.  Also we now learn vibe coding and make feature completed so understanding how we can give precise and accurate prompt to Agent such as Claude or codex using Agent.md file for context driven development.
+
+
+
+17. Receiving Critical Feedback
+ANS - Listen, separate useful signal from tone, ask clarifying questions, and turn valid points into changed behavior.
+Explantion - I selected Option 2 because constructive growth in development depends on the ability to process difficult feedback objectively and convert it into actionable improvement rather than reacting emotionally.
+Example - When management and seniors giving me feedback on my work or attitude and behavior I am thinking about where I is am wrong.
+I am listened carefully, Identify the specific behavioral or technical gap being highlighted, asking clarifying questions.
+
+
+18. Discipline and Follow-Through
+Ans - Disciplined completion matters: code should be reviewable, testable, documented enough, and clean enough that the next person does not inherit avoidable confusion
+Explantion - I selected Option 2 because sustainable Development quality depends on operationally on team not only on delivering functionality quickly, but also on ensuring the work is maintainable, testable.
+Example - feature may be completed but it's missing the cleanup, proper logging, review follow-ups, and error handling. 
+It's happened in development when dependency issue is not resolved and Build issue occur in deployment build. same for multiple API calling in Dev and Test environment due lack of testing and not proper implementation of feature. 
+
+
+19. Self-Improvement Without External Pressure
+ANS - It is important to identify your own gaps and deliberately work on them before they become formal performance issues.
+Explantion - I selected Option 2 because developer growth depends on proactive self-improvement rather than waiting for external pressure or formal escalation.
+Example - I  understand where is I am lacking and start improving my self such as before when I am send prompt to codex it's take time to understand prompt but now I am sending accurate point wise and prompt now it's take less token and task is completed 
+Also I am learning new concept which helpful for product development like RAG, MCP server and micro-fronted, microservices, system design, fronted architecture , scalability pattern, English Communication 
+
+
+
+20.  Improvement Plan for the Next Three Months
+ANS - It is useful to identify a focused improvement plan with specific themes, actions, and proof points rather than relying only on passive learning.
+Explantion - I selected Option 2 because There is always scope for growth and learning new things. 
+Example - make proper plan for learning new things and implementation of these things into product - now in zairoh we are directly connecting with Open AI keys but now we can make proper control environment using RAG architecture. Along with DDD pattern and Hexagonal, event driven, SSR for template calling and make proper SEO using SSR.  also understanding load balancer and system design, Database management, Notification architecture with multiple applications there is so many things to learn and implement in product,
+
+----------------------------------------------------------------------
+
+21. Working in Startup Ambiguity
+ANs - I can work effectively in ambiguity by structuring unknowns, making reasoned assumptions, communicating tradeoffs, and still moving delivery forward.
+Explantion - I selected Option 2 because In startup fast moving and environments often require developer to balance execution speed with responsibility and taking ownership even when requirements are not fully clear and finalize.
+Example - Currently I am working as senior developer in Zitics, before that I have worked in service-based startup there I have to work with client, 
+so, I have experience work with startup. I am always try to match timeline for this I did work hard and make delivery on time sometimes it may be delayed inf delay, so I am taking this responsibility on behalf of team. In PAPS Application I did work hard make functionality working and make demo working 
+
+
+22. Balancing Speed and Quality in a Product Company
+ANS - The right approach is to move quickly with judgment: protect the most important quality boundaries while being pragmatic about what can be improved later.
+Explantion - I selected Option 3 because sustainable product development requires balancing delivery speed with non-braking feature with optimize feature for next business rule. 
+Example - In client facing product in Demo we need to ensure that our test environment is working properly it happen sometime when we have demo then login feature is not working third party API is not working, for this we need one Tester who can test application or some developer make one or two round testing of application before client facing product.  Also need to maintain speed for development with proper validation and applying business rule. we are currently doing one feature dedicated to one developer, but when we test this feature it's braking because not proper implementation and testing 
+
+
+
+23. Product Thinking and OPAL Alignment
+ANS - I try to understand the business context, user impact, and product objective behind features so that implementation choices better serve the real goal.
+Explantion - I selected Option 2 because stronger engineering decisions usually come from understanding not only how to build something.
+Example - In Lead Creation Flow I take ownership gathering information and user expectation and user experience from seniors. While developing this feature I may got stuck due to lack of information but i have started communication with sir and clear doubt and make feature working. Also, I have made better user experience adding minor UI changes and proper error handling.   
+
+
+
+24. Initiative Without Being Asked
+ANS - I take initiative where it clearly improves outcomes and I can do so transparently, responsibly, and without creating ownership confusion.
+Explantion - I selected Option 2 because in fast-moving engineering teams often create value by identifying gaps, risks, or improvement opportunities before they become formal issues.
+Example - In Core UI Library we need to make build size less or compact. so, for this I have make changes in library also added deprecated policy,
+Same for PAPS, CAPS, OPAL application build size of fronted application it's braking issue even build create is not possible due to memory hep issue, for this I have not wait for other to do these changes I did these changes and make build properly and working, there is so many examples like this.
+
+
+
+25.  Representing Zitics in Front of Clients
+ANS - I should be able to explain my area clearly, honestly, and professionally to clients when needed, especially if I understand both the technical and business context.
+Explantion - I selected Option 2 because In modern product engineering often requires developers to communicate directly with clients, during the feature discussion or technical clarifications.
+Example - I am Agree as company grow some senior need to be take care of feature expiation to client. for is purpose Me and my collogue decide to star Internal Demo for make proper environment and seriousness about product this is also good for improve communication and how to handle demo in real environment. 
+
+
+
+
+---------------------------------------------------------------
+26. One-to-Two-Year Career Direction
+ANS - I have a reasonably clear direction for the next one to two years and can explain how my current work connects to that growth path.
+Explantion - I selected Option 2 because long-term growth is more effective when there is intentional direction behind skill development, ownership choices, and project experience rather than only reacting to immediate tasks.
+Example - Currently I am working as Team Lead now I am looking forward with adding knowledge in my current role like system design, architecture, backend scalability and product reliability directly support my goal of growing as senior software engineer and system designer. 
+
+
+27. Skills You Intend to Build Deliberately
+ANS - i  can identify the key skills I need to build and I am actively creating ways to improve them instead of waiting passively.
+Explantion - I selected Option 2 because identify the key skill that growth usually requires deliverable focus on specific capabilities that will most improve long tern effectiveness rather than relying only on exposure through daily tasks
+Example - I have Identify some area where we need to work, AI-assisted engineering discipline, technical communication, production observability, I am not waiting for tasks or feature I know about product, so I am planning against work and start developing feature, this happened so many times while developing product. taking fronted architecture and design pattern design to make product in better way.
+
+
+28. Weaknesses You Need to Address Honestly
+ANS - I can identify real weaknesses and I understand that working on them proactively is part of becoming more valuable to the company.
+Explantion - I selected Option 2 because honest self-awareness is essential for sustainable for growth and long-term ownership.
+Example - In current OPAL Application we are developing this product using Vibe coding now We don't have control on feature or code. we are just giving prompt and make feature working but we don't know it's correct or not in code point of view. we need to review code in deeply, currently developer create PR against of their respective feature or task, And I am approving this PR resolve conflicts and merge and test feature, it's working on that time but brake in demo so this is failure for me as developer.
+
+
+29. Alignment Between Personal Goals and Zitics Needs
+ANS - I want my growth to align with areas that also help Zitics build stronger product and delivery capability.
+Explantion - I selected Option 2 because the long-term professional growth usually happens when personal development and company objectives each other rather than moving in separate directions.
+Example - In started days I don't know about how to create UI Library for this I have purchase some coerces study the NPM in depth and create Core UI Library now we are using serval application, also same for Redux Toolkit, typescript, module federation, micro fronted, rocket chat, EditorJS, fronted deployment,  this is some concept I know about but i have study in depth and start development.  same for learning DDD concept Hexagonal Architecture I am learning to make product in better way to develop. 
+
+
+30.  Leadership Aspiration
+ANS - I want to grow into a form of leadership, and I understand that it requires capability, reliability, maturity, and trust—not just ambition.
+Explantion - I selected Option 2 because leadership is not only about titles or people management; it is about becoming someone the team can rely on for technical support, ownership, execution, communication, and problem-solving under pressure.
+Example - Currently I am working as team Lead, in some case I fail as team lead like delivery, but I am always guiding team for technical help.
+I have told so many times to team bout, attitude, leadership, ownership but they take me granted here i am fail. so, I am taking their task ownership mentor and make feature working. But As developer I am not fail I have taken my feature ownership and make working this feature sometimes it's delay but end of the day feature working as per expectations.  
+
+
+-------------------------------------------------------
+31.  What You Have Actually Delivered So Far
+ANS - I should describe specific deliverables, outcomes, and impact rather than general statements about being busy or involved.
+Explantion - I selected Option 2 because contribution is best demonstrated through measurable outcomes, ownership, and improvements delivered to the product rather than simply the volume of tasks handled.
+Example - 
+Take ownership of Core UI development, PAPS Application architecture, Auth Application CAPS, now OPAL, here I am not adding single single feature because this list is too much big. but also, where Need as senior developer there i have contributed sometimes I am working as product owner for gathering requirement and make task and distributed in team, even take ownership of fronted deployment and build After build testing of features.  now planning for internal demo to show work progress or where we are now and what we need to do next.
+
+
+32.  Impact Versus Activity
+ANS - I should distinguish effort from actual impact and be honest about where my work has, and has not, materially changed outcomes.
+Explantion - I selected Option 2 because performance assessment should focus not only on effort, but on the actual outcomes created through that work.
+Example - Mostly I have work in fronted, now fronted is visible sometimes it's good or sometimes not because everyone looks UI and feature on fronted. so, I created fronted layout of every application and proper routing to maintain SPA. also, Auth route also manages, Here Backend Team doing hard work along with fronted team to make API and integrate API, same for financial CMA section. it's team contribution. 
+
+
+33. Where You Fell Short
+ANS - I should identify real areas where I fell short and explain what I understand now that I did not understand then.
+Explantion - I selected Option 2 because honest reflection on shortcomings is important for long-term growth and ownership.
+Example - It happens when we don't no clear requirement of feature also happen when delivery planning did not fully account for dependencies. 
+now current working on OPAL platform I need to make proposal screen working for this they're getting tenet_id issue because we are mapping all proposal screen UI through JSON and here tenet_id is braking so for this task I need 3 to 4 days extra and next feature is depend on me so here I fell short because proposal dependency on me but any how I have resolved issue and now proposal filling is working. 
+
+
+34. Self-Rating With Justification
+ANS - I should rate myself based on a combination of delivery, quality, ownership, learning, and the trust I have actually earned through behavior.
+Explantion - I selected Option 2 because an honest performance assessment should balance measurable delivery with quality, accountability, growth, and operational reliability
+Example - I am learning from my failure - in last discussion with my manager they told me we are doing hard work, but outcome is not showing, for this I am planning to show output troughs Internal Demo and its good start for me to showcase work output not hard work.
+Take ownership during incident - In Demo Application is brake while upload documents and all create Lead form empty, now here upload documents feature I have not work but take ownership and next demo multi-file upload and auto save feature implemented. 
+building trust through consistent execution - I have built trust from Zitics organizations, for this I did my work honestly, taking ownership, and loyal to organization in every situation. to build trust is slow process and take time to prove yourself.
+
+35. Your Most Important Contribution So Far
+ANS - My most important contribution should be described as a specific piece of value with clear context, effort, and outcome.
+Explantion - I selected Option 2 because meaningful contribution is best demonstrated through a concrete example that clearly shows.
+Example - I have taken responsibility not only feature or section I have responsibility of entire Application like PAPS, Auth, Core, CAPS, and now OPAL. I can't add feature-based contribution here because I am working here more than 2 years so there is too many feature I have deliver. 
+
+----------------------------------------------------------------------
+36.  Support You Need to Perform Better
+ANS - I should identify specific support—such as clearer priorities, faster decisions, tool access, review quality, or domain enablement—that would materially improve my effectiveness.
+Explantion - I selected Option 2 because actionable support requests are more valuable than generic expectations,
+Example - Clear and specific feedback helps the organization identify improvement that increase productive delivery. in some feature still we are not clear about what to do suppose in proposal field, annexture, CMA, there is need to some better communication. also in completed feature we need feedback it's up to the mark or need to more improvement. 
+
+
+37. Expectations from Leadership
+ANS - I expect leadership to provide clarity where needed, timely decisions, honest feedback, prioritization discipline, and a standard of seriousness that helps the team execute well.
+Explantion - I selected Option 2 because, as a team lead, effective execution depends on alignment between development teams and leadership. 
+Example -  I have already mentions I am fell in some cases in leader, but not a developer, as a developer I have taken ownership of feature and completed the feature. I have made so many discussions with team also make 2 to 3 times one to one discussion with team and send feedback but still there is no expected result we get from both sides. Also understand teammates strong point and assign task along with this but still fail in delivery. 
+
+38. What Currently Slows You Down Most
+ANS - I can identify the one or two biggest sources of friction and explain how they affect speed, quality, learning, or confidence.
+Explantion - I selected Option 2 because identifying real operational for improving both individual effectiveness and overall team delivery quality.
+Example -  In some cases clarifies priority during active implementation. now requirement documentation is not clear respective feature. along with what we need expect from this feature. it happens while developing new feature its delay the development. need to work on same feature again and again then speed of development is reduced.  I am learning from new feature like create lead & lead view and consent is new thing currently. 
+
+
+39. Suggestions That Would Improve Team Performance
+ANS - I can identify concrete improvements in process, review quality, ownership, planning, documentation, or communication that would raise team effectiveness.
+Explantion - I selected Option 2 because team improvement usually comes from discipline, and collaboration practices rather than focusing only on individual effort.
+Example -  1. feature clear requirement - clearer prioritization and scope alignment before implementation,
+   2. communication -  we need more structured communication between product, and development team also in fronted backend team, now they assuming that we have 2 teams but we are one team, due to this blaming on each other start. 
+3. discipline - currently junior team don't have discipline and when i am discuss some technical point they are smiling, now here is lack of discipline.
+
+
+40. What Would Most Improve Your Performance in the Next Quarter
+ANS - I should identify the one or two changes that would most improve my effectiveness in the next quarter and explain their expected impact clearly.
+Explantion - I selected Option 2 because focused and actionable improvements are more valuable
+Example - From my perspective I need clear Priority of feature and fast requirement Decisions. and second one Business Validation on requirement and high-level technical support required if there is need.  Also make feature delivery in better way along with minor issue fixes of previous feature to improve feature. 
+ 
+ 
+-----------------------------------------------------------------
+41. Learning Business Domain Without Heavy SME Dependence
+ANS - Break down the business process, use available documents and AI to understand key concepts, define assumptions, and progress responsibly while highlighting risks.
+Explantion - I selected Option 3 because IF we have hint about feature then we can start creating after some time we update the feature.
+Example -  Now I am working more than 2 year this product now I am assuming like we have to create UI, API, and integrate API, so this is basic things we need to setup after some times requirement clear we can only update UI and API but integration part is completed so we need to work on validation and business Rule same thing I have apply in Lead section, lead preview, Lead list so it's reduce the wafting time.
+
+
+42. Translating Business Language Into Technical Design
+ANS - Convert the business explanation into structured flows, entities, rules, decision points, and technical open questions that engineering can act on.
+Explantion - I selected Option 2 because one of the most important skills of developer to convert business requirement into technical Design requirement and create proper plan for respective feature and create rules, validation, data model API UI.
+Example - I have work on this kind of situation now while developing Annexture, lead section, proposal section, and many more feature this is latest feature here i have work like this condition.
+
+
+43. Independent Execution With Minimal Supervision
+ANS - Create a structured execution plan covering understanding, assumptions, design, implementation, tests, and check-in points so the feature continues moving responsibly.
+Explantion - I selected Option 3 because independent execution in fast-moving development environments requires structured thinking, responsible decision-making, and proactive ownership
+Example - As a Solo developer working on some feature with proper requirement is better in some case. but when now we have feature is dependent on another feature so It's brake in some case. 
+I have work as independent developer in so many features currently I am worked on Lead creation flow so now it's working same for proposal workspace feature. 
+
+
+44. Ensuring Business Alignment During Build
+ANS - Use checkpoints, artifacts, sample flows, assumptions, and feedback loops during implementation to keep business intent aligned with technical execution.
+Expectations - I selected Option 2 because business and technical alignment can drift during implementation, especially in complex workflow-driven systems.
+Example - Now in Lead creation and acceptance flow there is technical alignment and business can drift during implementation, like consent, Validation Rule third Party API call, And lead acceptance criteria so still lead acceptance feature criteria is missing and we cover this using business   rule, but now stuck in here we accpet lead and procced for next flow like proposal creation and organization flow.  
+
+45.  Independence Rating on Business-to-Build Capability
+ANS - I should rate myself based on actual evidence of understanding, planning, and execution with limited dependency
+Explantion - I selected Option 2 because business-to-build capability is best measured through demonstrated execution.
+Example - there is so many examples to convert business requirement to converting technical plan and executing this up to deployment and After deployment testing application and demonstrate, in PAPS,Auth, CAPS, Core,  Application we did this so many ties now in OPAL platform also we did in many feature example -In internal demo showing current work progress.
+
+
+-----------------------------------------------------------------
+
+46. Overall Self-Classification
+ANS - Reliable Engineer – I can usually be trusted to deliver responsibly, learn, communicate well, and add stable value even if I am still growing.
+Explantion - selected Option 3 because it most accurately reflects a balanced and evidence-based assessment of my current contribution and growth stage.
+Example - As a team lead, I have taken ownership of delivery, technical decision-making, cross-functional collaboration, and problem-solving under changing priorities and ambiguity. I am comfortable working independently on business-to-technical translation, feature planning, scalable APIs.  now I have gain some domain expertise and long-term architecture thinking. 
+
+
+47. The Strongest Reason Zitics Should Trust You
+ANS - The company should trust me because I can point to specific patterns of reliability, ownership, learning, and delivery that have already been demonstrated.
+Explantion - I selected Option 2 because long-term trust is built through consistently demonstrated behavior rather than only effort, tenure, or confidence.
+Example - I have started journey in Zitics from 1st day and still I am part of Zitics. there is so many member come in Organization and leave organization but still I am part of Zitics. I am always available when Zitics need apart from working Hr, I am taking ownership of not feature but Application and I am loyal to organization.  
+
+
+
+48. The Biggest Gap You Must Close
+ANS - I can identify one critical gap—technical, behavioral, business, or ownership-related—that would noticeably raise my effectiveness if addressed seriously.
+Explantion - I selected Option 2 because honest growth requires identifying the single improvement area.
+example - From my perspective, the biggest gap I need to close is clear Business requirement to technical design and development plan and after development we need round of testing here in testing we miss the proper testing it's also one of the reasons of braking application.  Also, Ownership against feature is lacking, Attitude and discipline is also lacking so here we need to work.
+
+
+49. Would You Bet on Yourself for a Critical Client Commitment?
+ANS - Yes, because my current capability and behavior support meaningful trust, even if some guidance is still valuable.
+Explantion - I selected Option 3 because I believe I have already demonstrated the level of reliability, ownership, communication, and technical execution needed to handle meaningful and responsibilities responsibly.
+Example - For this I have started communicating with management via Internal Demo, discussing real time problem and solve this problem in next demo. This is one of the example, apart from this I have build trust and building trust is not that easy, I am loyal with organization, And I know I am taking ownership and if in case it's brake then I am accept this blame also. so it's not only that when everything going good so take credit and if brake then blame other.
+
+50.  Closing Statement About Yourself
+ANS - I should summarize myself through demonstrated strengths, current limitations, and a credible picture of how I am likely to contribute going forward.
+Explantion - I see myself as a dependable full-stack engineer and team lead who combines technical execution with ownership, learning mindset, and product awareness. Over the last several years, I have contributed across frontend and some part of backend development, workflow-driven systems, architecture discussions, production issue handling, and team coordination while develop combined feature.  Also, I am comfortable taking ownership of features end-to-end, collaborating across teams, supporting delivery decisions, and maintaining accountability during both successful releases and difficult situations.
+Apart from this Learning new things that will help to product development for this system design, large-scale architecture. Zitics Can bet on me. 
+
+
+52.Anything else you would like to mention 
+Yes, 
+First of all, thank you, give me opportunity to work on Application where need development from scratch, I have learned so many new things in this organization and implemented these things in project.
+Now I am learning new things like DSA and System design and Architecture so I hope so I get chance to implement this things in real Application.
+
+Apart from this we need proper clear documentation on feature od module it will help for both development Team, tester and Business owner to maintain requirement of feature. 
+We need one Tester for testing Application on regular basis to reduce application braking chances before demo. 
+Thank you.
+
+
+
+-----------------------

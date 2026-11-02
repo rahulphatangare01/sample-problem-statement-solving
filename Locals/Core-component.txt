@@ -1,0 +1,44 @@
+       1. Heading 
+	   2. NavigateArrow 
+	   3. ZAccordian  
+       4. ZAvtar 
+       5. ZButton 
+       6. ZButtonWithRadio 
+       7. ZCalender 
+	   8. ZCard
+       9. Zcontainer 
+      10. ZDropDown 
+	  11. ZGreetingIcon 
+	  12. ZGrid 
+	  13. ZInfoIcon 
+	  14. ZValidInput
+	  15. ZListOrder
+	  16. ZLogo 
+	  17. ZLContainer 
+	  18. ZModal 
+	  19. ZPasswordInfoIcon 
+      20. ZProgress
+	  21. ZRadio 
+	  22. ZSpanHref 
+	  23. ZSteeper 
+	  24. ZTable 
+	  25. ZTextarea 
+      26. ZThreeDotHamburg 
+      27. ZToast 
+      28. ZToolTip
+	  
+	  
+	  
+--------------------------------------------- Registration Updated Flow ----------------------------------------
+AUTH:-    
+		 1.Match desgin as per publish Desgin Pattern for Registration Screen 
+		 2.Match Desgin As per publish Desgin Pattern for Login Screen
+		 
+		    2.1  Create new Screen for OTP Verification 
+            2.2  Add Reveres CountDown for OTP Validation for Mobile ,Email 
+		3. Data Modeling For Auth 
+            1. Register
+            2. Set Password
+            3. Login
+			
+        4. Check End to End Auth Process 		

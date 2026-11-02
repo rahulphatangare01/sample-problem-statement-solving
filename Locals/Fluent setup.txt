@@ -1,0 +1,6 @@
+Installing Fluent UI React
+                     
+					 Step 1:- install package					 
+					         npm install @fluentui/react-components
+							 Installing Fluent UI React
+							 
